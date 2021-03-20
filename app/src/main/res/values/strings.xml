@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Health_And_Fitness</string>
     <string name="exercise_URL">https://vimeo.com/showcase/8125021</string>
+    <string name="title_size">30dp</string>
 </resources>

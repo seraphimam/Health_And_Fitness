@@ -1,11 +1,148 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@color/background"
+    tools:context=".Exercise_Video">
 
-    <Webview
+    <!-- Title box-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:text="Exercise"
+            android:gravity="center_vertical|right"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:contentDescription="Exercise Image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:scaleType="fitStart"
+            android:src="@drawable/exercise"/>
+
+    </LinearLayout>
+
+
+    <!-- Button to go back to previous video -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="15"
+        android:weightSum="100">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35"/>
+
+        <Button
+            android:id="@+id/up"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:background="@drawable/up"/>
+
+    </LinearLayout>
+
+    <!-- WebView to display web page -->
+    <WebView
         android:id="@+id/exercise_video"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="40"/>
 
-</RelativeLayout>
+    <!-- Button to go to next video -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="15"
+        android:weightSum="100">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35"/>
+
+        <Button
+            android:id="@+id/down"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:background="@drawable/down"/>
+
+    </LinearLayout>
+
+    <!--Footer section for command buttons-->
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="20"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="50"
+            android:weightSum="100">
+
+            <!-- separation box-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="10" />
+
+            <ImageButton
+                android:contentDescription="back button"
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="80"
+                android:src="@drawable/back"
+                android:scaleType="fitCenter"
+                android:background="@drawable/round_button"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="50"
+            android:weightSum="100">
+
+            <!-- separation box-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="10" />
+
+            <Button
+                android:id="@+id/speech"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="80"
+                android:background="@drawable/mic"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
