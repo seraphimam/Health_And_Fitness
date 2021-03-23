@@ -1,11 +1,13 @@
 package com.example.health_and_fitness;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,8 +30,17 @@ public class Exercise_Video extends AppCompatActivity {
 
         Button up = (Button) findViewById(R.id.up);
         Button down = (Button) findViewById(R.id.down);
+        ImageButton back = (ImageButton) findViewById(R.id.back);
 
         set_button();
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Exercise_Video.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         up.setOnClickListener(new View.OnClickListener(){
             @Override
