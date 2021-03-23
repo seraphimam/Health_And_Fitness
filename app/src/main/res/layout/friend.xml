@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".friend">
+    <!--android:background="@color/background" -->
+
+
+    <!-- Title box-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="237dp"
+            android:layout_height="50dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="friend"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:src="@drawable/ic_launcher_foreground" />
+    </LinearLayout>
+
+
+    <!-- separation box-->
+
+    <!--Footer section for command buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="436dp"
+        android:layout_weight="30"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:dividerHeight="1dp"></ListView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_weight="20"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            android:text="add+" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_weight="20"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <!-- separation box-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:orientation="horizontal" />
+
+            <Button
+                android:id="@+id/BACK"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="80" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <!-- separation box-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:orientation="horizontal" />
+
+            <Button
+                android:id="@+id/speech"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="80"
+                android:background="@drawable/mic" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
