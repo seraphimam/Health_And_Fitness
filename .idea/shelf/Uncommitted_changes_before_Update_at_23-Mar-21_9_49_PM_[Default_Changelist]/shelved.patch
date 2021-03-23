@@ -1,0 +1,1037 @@
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"1.8\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ .idea/gradle.xml	(date 1616531224794)
+@@ -15,6 +15,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: app/src/main/res/layout/healthy_food.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    tools:context=\".healthyfood\">\r\n    <!--android:background=\"@color/background\" -->\r\n\r\n\r\n    <!-- Title box-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"10\"\r\n        android:orientation=\"horizontal\">\r\n\r\n        <TextView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"50\"\r\n            android:gravity=\"center\"\r\n            android:orientation=\"vertical\"\r\n            android:text=\"healthy food\"\r\n            android:textSize=\"30dp\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/healthyfood\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:scaleType=\"fitStart\"\r\n            android:layout_weight=\"50\"\r\n            android:src=\"@drawable/apple\" />\r\n    </LinearLayout>\r\n\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"10\"\r\n        android:orientation=\"horizontal\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"40\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/up\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"\r\n            android:text=\"Button\" />\r\n    </LinearLayout>\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"50\"\r\n        android:orientation=\"horizontal\"\r\n        android:weightSum=\"100\">\r\n\r\n        <ListView\r\n            android:id=\"@android:id/list\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:dividerHeight=\"1dp\">\r\n        </ListView>\r\n\r\n\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"10\"\r\n        android:orientation=\"horizontal\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"40\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/down\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"\r\n            android:text=\"Button\" />\r\n    </LinearLayout>\r\n\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"20\"\r\n        android:orientation=\"horizontal\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <ImageButton\r\n                android:contentDescription=\"back button\"\r\n                android:id=\"@+id/back\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:src=\"@drawable/back\"\r\n                android:scaleType=\"fitCenter\"\r\n                android:background=\"@drawable/round_button\"\r\n                />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"50\"\r\n            android:orientation=\"horizontal\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"10\"\r\n                android:orientation=\"horizontal\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\" />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/healthy_food.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/healthy_food.xml	(date 1616535552617)
+@@ -20,19 +20,21 @@
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="50"
+-            android:gravity="center"
+-            android:orientation="vertical"
+-            android:text="healthy food"
+-            android:textSize="30dp" />
++            android:layout_weight="70"
++            android:text="HEALTHY"
++            android:gravity="center_vertical|right"
++            android:textSize="30dp"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textStyle="bold"
++            android:background="#4CAF50" />
+ 
+         <ImageView
+-            android:id="@+id/healthyfood"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
++            android:layout_weight="50"
+             android:scaleType="fitStart"
+-            android:layout_weight="50"
+-            android:src="@drawable/apple" />
++            android:background="#4CAF50"
++            android:src="@drawable/healthy"/>
+     </LinearLayout>
+ 
+ 
+@@ -144,8 +146,8 @@
+ 
+             <Button
+                 android:id="@+id/speech"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_width="4dp"
++                android:layout_height="103dp"
+                 android:layout_weight="80"
+                 android:background="@drawable/mic" />
+ 
+Index: app/src/main/res/layout/exercise.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\" ?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".Exercise_Video\">\r\n\r\n    <!-- Title box-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\">\r\n\r\n        <TextView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"70\"\r\n            android:text=\"Exercise\"\r\n            android:gravity=\"center_vertical|right\"\r\n            android:textSize=\"30dp\" />\r\n\r\n        <ImageView\r\n            android:contentDescription=\"Exercise Image\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"50\"\r\n            android:scaleType=\"fitStart\"\r\n            android:src=\"@drawable/exercise\"/>\r\n\r\n    </LinearLayout>\r\n\r\n\r\n    <!-- Button to go back to previous video -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"15\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"35\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/up\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"30\"\r\n            android:background=\"@drawable/up\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- WebView to display web page -->\r\n    <WebView\r\n        android:id=\"@+id/exercise_video\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"40\"/>\r\n\r\n    <!-- Button to go to next video -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"15\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"35\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/down\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"30\"\r\n            android:background=\"@drawable/down\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:baselineAligned=\"false\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"20\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <ImageButton\r\n                android:contentDescription=\"back button\"\r\n                android:id=\"@+id/back\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:src=\"@drawable/back\"\r\n                android:scaleType=\"fitCenter\"\r\n                android:background=\"@drawable/round_button\"\r\n                />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\"\r\n                />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/exercise.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/exercise.xml	(date 1616534402574)
+@@ -19,9 +19,12 @@
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="70"
+-            android:text="Exercise"
++            android:text="EXERCISES"
+             android:gravity="center_vertical|right"
+-            android:textSize="30dp" />
++            android:textSize="30dp"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textStyle="bold"
++            android:background="#4CAF50"/>
+ 
+         <ImageView
+             android:contentDescription="Exercise Image"
+@@ -29,7 +32,8 @@
+             android:layout_height="match_parent"
+             android:layout_weight="50"
+             android:scaleType="fitStart"
+-            android:src="@drawable/exercise"/>
++            android:src="@drawable/exercise"
++            android:background="#4CAF50"/>
+ 
+     </LinearLayout>
+ 
+@@ -136,11 +140,10 @@
+ 
+             <Button
+                 android:id="@+id/speech"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_width="3dp"
++                android:layout_height="119dp"
+                 android:layout_weight="80"
+-                android:background="@drawable/mic"
+-                />
++                android:background="@drawable/mic" />
+ 
+         </LinearLayout>
+     </LinearLayout>
+Index: app/src/main/res/layout/timetable.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\" ?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".Timetable\">\r\n\r\n    <!-- Title box-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\">\r\n\r\n        <TextView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"70\"\r\n            android:text=\"Timetable\"\r\n            android:gravity=\"center_vertical|right\"\r\n            android:textSize=\"30dp\" />\r\n\r\n        <ImageView\r\n            android:contentDescription=\"Timetable Image\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"50\"\r\n            android:scaleType=\"fitStart\"\r\n            android:src=\"@drawable/timetable\"/>\r\n\r\n    </LinearLayout>\r\n\r\n\r\n    <!-- WebView to display web page -->\r\n    <WebView\r\n        android:id=\"@+id/exercise_video\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"70\"/>\r\n\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:baselineAligned=\"false\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"20\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <ImageButton\r\n                android:contentDescription=\"back button\"\r\n                android:id=\"@+id/back\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:src=\"@drawable/back\"\r\n                android:scaleType=\"fitCenter\"\r\n                android:background=\"@drawable/round_button\"\r\n                />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\"\r\n                />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/timetable.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/timetable.xml	(date 1616534572368)
+@@ -19,9 +19,12 @@
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="70"
+-            android:text="Timetable"
+             android:gravity="center_vertical|right"
+-            android:textSize="30dp" />
++            android:text="TIMETABLE"
++            android:textSize="30dp"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textStyle="bold"
++            android:background="#4CAF50"/>
+ 
+         <ImageView
+             android:contentDescription="Timetable Image"
+@@ -29,7 +32,9 @@
+             android:layout_height="match_parent"
+             android:layout_weight="50"
+             android:scaleType="fitStart"
+-            android:src="@drawable/timetable"/>
++            android:src="@drawable/timetable"
++
++            android:background="#4CAF50"/>
+ 
+     </LinearLayout>
+ 
+@@ -93,11 +98,10 @@
+ 
+             <Button
+                 android:id="@+id/speech"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_width="7dp"
++                android:layout_height="116dp"
+                 android:layout_weight="80"
+-                android:background="@drawable/mic"
+-                />
++                android:background="@drawable/mic" />
+ 
+         </LinearLayout>
+     </LinearLayout>
+Index: app/src/main/res/layout/exercise_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".MainActivity\">\r\n\r\n    <!-- Title box-->\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"10\"\r\n        android:text=\"Food\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"30dp\" />\r\n\r\n    <!-- separation box-->\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"20\" />\r\n\r\n    <!-- horizontal box containing buttons to access Exercise and Steps-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"30\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/exercise\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/exercise\"\r\n            android:textAlignment=\"center\"\r\n            android:layout_weight=\"40\"/>\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/steps\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/steps\"\r\n            android:textAlignment=\"center\"\r\n            android:layout_weight=\"40\"/>\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- separation box-->\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"20\" />\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"20\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <ImageButton\r\n                android:contentDescription=\"back button\"\r\n                android:id=\"@+id/back\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:src=\"@drawable/back\"\r\n                android:scaleType=\"fitCenter\"\r\n                android:background=\"@drawable/round_button\"\r\n                />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\"\r\n                />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/exercise_home.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/exercise_home.xml	(date 1616535552614)
+@@ -6,25 +6,43 @@
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:weightSum="100"
+-    android:background="@color/background"
+-    tools:context=".MainActivity">
++    tools:context=".MainActivity"
++    android:background="#4CAF50">
+ 
+     <!-- Title box-->
+-    <TextView
++    <LinearLayout
+         android:layout_width="match_parent"
+-        android:layout_height="0dp"
+-        android:orientation="vertical"
+-        android:layout_weight="10"
+-        android:text="Food"
+-        android:gravity="center"
+-        android:textSize="30dp" />
++        android:layout_height="42dp"
++        android:layout_weight="5"
++        android:orientation="horizontal">
++
++        <TextView
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="70"
++            android:text="EXERCISES"
++            android:gravity="center_vertical|right"
++            android:textSize="30dp"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textStyle="bold"
++            android:background="#4CAF50" />
++
++        <ImageView
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="50"
++            android:scaleType="fitStart"
++            android:background="#4CAF50"
++            android:src="@drawable/exercise" />
++    </LinearLayout>
+ 
+     <!-- separation box-->
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:orientation="vertical"
+-        android:layout_weight="20" />
++        android:layout_weight="20"
++        android:background="@android:color/white"/>
+ 
+     <!-- horizontal box containing buttons to access Exercise and Steps-->
+     <LinearLayout
+@@ -37,7 +55,8 @@
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="5"/>
++            android:layout_weight="5"
++            android:background="@android:color/white"/>
+ 
+         <Button
+             android:id="@+id/exercise"
+@@ -50,7 +69,8 @@
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="10"/>
++            android:layout_weight="10"
++            android:background="@android:color/white"/>
+ 
+         <Button
+             android:id="@+id/steps"
+@@ -63,7 +83,8 @@
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="5"/>
++            android:layout_weight="5"
++            android:background="@android:color/white"/>
+ 
+     </LinearLayout>
+ 
+@@ -72,7 +93,9 @@
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:orientation="vertical"
+-        android:layout_weight="20" />
++        android:layout_weight="20"
++        android:background="#4CAF50"
++        android:background="@android:color/white"/>
+ 
+     <!--Footer section for command buttons-->
+     <LinearLayout
+@@ -80,31 +103,34 @@
+         android:layout_height="0dp"
+         android:orientation="horizontal"
+         android:layout_weight="20"
+-        android:weightSum="100">
++        android:weightSum="100"
++        android:background="@android:color/white">
+ 
+         <LinearLayout
+             android:layout_width="0dp"
+-            android:layout_height="match_parent"
+-            android:orientation="horizontal"
++            android:layout_height="136dp"
+             android:layout_weight="50"
+-            android:weightSum="100">
++            android:orientation="horizontal"
++            android:weightSum="100"
++            android:background="@android:color/white">
+ 
+             <!-- separation box-->
+             <View
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+-                android:orientation="horizontal"
+-                android:layout_weight="10" />
++                android:layout_weight="10"
++                android:background="@android:color/white"
++                android:orientation="horizontal" />
+ 
+             <ImageButton
+-                android:contentDescription="back button"
+                 android:id="@+id/back"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_width="158dp"
++                android:layout_height="wrap_content"
+                 android:layout_weight="80"
+-                android:src="@drawable/back"
++                android:background="@android:color/white"
++                android:contentDescription="back button"
+                 android:scaleType="fitCenter"
+-                android:background="@drawable/round_button"
++                android:src="@drawable/back"
+                 />
+         </LinearLayout>
+ 
+@@ -113,19 +139,21 @@
+             android:layout_height="match_parent"
+             android:orientation="horizontal"
+             android:layout_weight="50"
+-            android:weightSum="100">
++            android:weightSum="100"
++            android:background="@android:color/white">
+ 
+             <!-- separation box-->
+             <View
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal"
+-                android:layout_weight="10" />
++                android:layout_weight="10"
++                />
+ 
+             <Button
+                 android:id="@+id/speech"
+                 android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_height="117dp"
+                 android:layout_weight="80"
+                 android:background="@drawable/mic"
+                 />
+Index: app/src/main/res/layout/food_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".Food_Home\">\r\n\r\n    <!-- Title box-->\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"10\"\r\n        android:text=\"Food\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"30dp\" />\r\n\r\n    <!-- separation box-->\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"20\" />\r\n\r\n    <!-- horizontal box containing buttons to access Food and Recipes-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"30\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/food\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/food\"\r\n            android:textAlignment=\"center\"\r\n            android:layout_weight=\"40\"/>\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/recipes\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/recipes\"\r\n            android:textAlignment=\"center\"\r\n            android:layout_weight=\"40\"/>\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- separation box-->\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"20\" />\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"20\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <ImageButton\r\n                android:contentDescription=\"back button\"\r\n                android:id=\"@+id/back\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:src=\"@drawable/back\"\r\n                android:scaleType=\"fitCenter\"\r\n                android:background=\"@drawable/round_button\"\r\n                />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\"\r\n                />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/food_home.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/food_home.xml	(date 1616535369641)
+@@ -6,25 +6,43 @@
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:weightSum="100"
+-    android:background="@color/background"
+-    tools:context=".Food_Home">
++    tools:context=".Food_Home"
++    android:background="#4CAF50">
+ 
+     <!-- Title box-->
+-    <TextView
++    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+-        android:orientation="vertical"
+         android:layout_weight="10"
+-        android:text="Food"
+-        android:gravity="center"
+-        android:textSize="30dp" />
++        android:orientation="horizontal">
++
++        <TextView
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="70"
++            android:background="#4CAF50"
++            android:gravity="center_vertical|right"
++            android:text="FOOD"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textSize="30dp"
++            android:textStyle="bold" />
++
++        <ImageView
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="50"
++            android:background="#4CAF50"
++            android:scaleType="fitStart"
++            android:src="@drawable/food" />
++    </LinearLayout>
+ 
+     <!-- separation box-->
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:orientation="vertical"
+-        android:layout_weight="20" />
++        android:layout_weight="20"
++        android:background="@android:color/white"/>
+ 
+     <!-- horizontal box containing buttons to access Food and Recipes-->
+     <LinearLayout
+@@ -37,20 +55,22 @@
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="5"/>
++            android:layout_weight="5"
++            android:background="@android:color/white"/>
+ 
+         <Button
+             android:id="@+id/food"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:background="@drawable/food"
++            android:background="@drawable/healthy"
+             android:textAlignment="center"
+             android:layout_weight="40"/>
+ 
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="10"/>
++            android:layout_weight="10"
++            android:background="@android:color/white"/>
+ 
+         <Button
+             android:id="@+id/recipes"
+@@ -63,7 +83,8 @@
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="5"/>
++            android:layout_weight="5"
++            android:background="@android:color/white"/>
+ 
+     </LinearLayout>
+ 
+@@ -72,7 +93,8 @@
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:orientation="vertical"
+-        android:layout_weight="20" />
++        android:layout_weight="20"
++        android:background="@android:color/white"/>
+ 
+     <!--Footer section for command buttons-->
+     <LinearLayout
+@@ -80,21 +102,24 @@
+         android:layout_height="0dp"
+         android:orientation="horizontal"
+         android:layout_weight="20"
+-        android:weightSum="100">
++        android:weightSum="100"
++        android:background="@android:color/white">
+ 
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:orientation="horizontal"
+             android:layout_weight="50"
+-            android:weightSum="100">
++            android:weightSum="100"
++            android:background="@android:color/white">
+ 
+             <!-- separation box-->
+             <View
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal"
+-                android:layout_weight="10" />
++                android:layout_weight="10"
++                android:background="@android:color/white"/>
+ 
+             <ImageButton
+                 android:contentDescription="back button"
+@@ -117,18 +142,18 @@
+ 
+             <!-- separation box-->
+             <View
+-                android:layout_width="0dp"
++                android:layout_width="6dp"
+                 android:layout_height="match_parent"
++                android:layout_weight="10"
+                 android:orientation="horizontal"
+-                android:layout_weight="10" />
++                android:background="@android:color/white"/>
+ 
+             <Button
+                 android:id="@+id/speech"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_width="1dp"
++                android:layout_height="117dp"
+                 android:layout_weight="80"
+-                android:background="@drawable/mic"
+-                />
++                android:background="@drawable/mic" />
+ 
+         </LinearLayout>
+     </LinearLayout>
+Index: app/src/main/res/layout/recipe.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\" ?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".Recipe\">\r\n\r\n    <!-- Title box-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\">\r\n\r\n        <TextView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"70\"\r\n            android:text=\"Recipe\"\r\n            android:gravity=\"center_vertical|right\"\r\n            android:textSize=\"30dp\" />\r\n\r\n        <ImageView\r\n            android:contentDescription=\"Recipe Image\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"50\"\r\n            android:scaleType=\"fitStart\"\r\n            android:src=\"@drawable/recipes\"/>\r\n\r\n    </LinearLayout>\r\n\r\n\r\n    <!-- Button to go back to previous video -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"15\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"35\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/up\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"30\"\r\n            android:background=\"@drawable/up\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- WebView to display web page -->\r\n    <WebView\r\n        android:id=\"@+id/exercise_video\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"40\"/>\r\n\r\n    <!-- Button to go to next video -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"15\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"35\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/down\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"30\"\r\n            android:background=\"@drawable/down\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:baselineAligned=\"false\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"20\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <ImageButton\r\n                android:contentDescription=\"back button\"\r\n                android:id=\"@+id/back\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:src=\"@drawable/back\"\r\n                android:scaleType=\"fitCenter\"\r\n                android:background=\"@drawable/round_button\"\r\n                />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\"\r\n                />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/recipe.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/recipe.xml	(date 1616534728833)
+@@ -19,9 +19,12 @@
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="70"
+-            android:text="Recipe"
++            android:text="RECIPES"
+             android:gravity="center_vertical|right"
+-            android:textSize="30dp" />
++            android:textSize="30dp"
++            android:background="#4CAF50"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textStyle="bold"/>
+ 
+         <ImageView
+             android:contentDescription="Recipe Image"
+@@ -29,7 +32,11 @@
+             android:layout_height="match_parent"
+             android:layout_weight="50"
+             android:scaleType="fitStart"
+-            android:src="@drawable/recipes"/>
++            android:src="@drawable/recipes"
++            android:background="#4CAF50"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textSize="30sp"
++            android:textStyle="bold"/>
+ 
+     </LinearLayout>
+ 
+@@ -136,11 +143,10 @@
+ 
+             <Button
+                 android:id="@+id/speech"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_width="18dp"
++                android:layout_height="113dp"
+                 android:layout_weight="80"
+-                android:background="@drawable/mic"
+-                />
++                android:background="@drawable/mic" />
+ 
+         </LinearLayout>
+     </LinearLayout>
+Index: app/src/main/res/layout/friend.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    tools:context=\".friend\">\r\n    <!--android:background=\"@color/background\" -->\r\n\r\n\r\n    <!-- Title box-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"42dp\"\r\n        android:layout_weight=\"10\"\r\n        android:orientation=\"horizontal\">\r\n\r\n        <TextView\r\n            android:layout_width=\"237dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:layout_weight=\"10\"\r\n            android:gravity=\"center\"\r\n            android:orientation=\"vertical\"\r\n            android:text=\"friend\"\r\n            android:textSize=\"30dp\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_weight=\"10\"\r\n            android:src=\"@drawable/ic_launcher_foreground\" />\r\n    </LinearLayout>\r\n\r\n\r\n    <!-- separation box-->\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"436dp\"\r\n        android:layout_weight=\"30\"\r\n        android:orientation=\"horizontal\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:id=\"@+id/view\"\r\n            android:layout_width=\"194dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_weight=\"70\" />\r\n\r\n        <ListView\r\n            android:id=\"@android:id/list\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"70\"\r\n            android:dividerHeight=\"1dp\"></ListView>\r\n\r\n\r\n    </LinearLayout>\r\n\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"67dp\"\r\n        android:layout_weight=\"20\"\r\n        android:orientation=\"horizontal\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"50\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/button\"\r\n            android:layout_width=\"80dp\"\r\n            android:layout_height=\"80dp\"\r\n            android:layout_weight=\"0\"\r\n            android:text=\"add+\" />\r\n    </LinearLayout>\r\n\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"20\"\r\n        android:orientation=\"horizontal\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <ImageButton\r\n                android:contentDescription=\"back button\"\r\n                android:id=\"@+id/back\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:src=\"@drawable/back\"\r\n                android:scaleType=\"fitCenter\"\r\n                android:background=\"@drawable/round_button\"\r\n                />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"50\"\r\n            android:orientation=\"horizontal\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"10\"\r\n                android:orientation=\"horizontal\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\" />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/friend.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/friend.xml	(date 1616535231297)
+@@ -18,20 +18,23 @@
+         android:orientation="horizontal">
+ 
+         <TextView
+-            android:layout_width="237dp"
+-            android:layout_height="50dp"
+-            android:layout_weight="10"
+-            android:gravity="center"
+-            android:orientation="vertical"
+-            android:text="friend"
+-            android:textSize="30dp" />
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="70"
++            android:text="FRIENDS"
++            android:gravity="center_vertical|right"
++            android:textSize="30dp"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textStyle="bold"
++            android:background="#4CAF50" />
+ 
+         <ImageView
+-            android:id="@+id/imageView"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_weight="10"
+-            android:src="@drawable/ic_launcher_foreground" />
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="50"
++            android:scaleType="fitStart"
++            android:background="#4CAF50"
++            android:src="@drawable/friends" />
+     </LinearLayout>
+ 
+ 
+@@ -64,7 +67,7 @@
+ 
+     <LinearLayout
+         android:layout_width="match_parent"
+-        android:layout_height="67dp"
++        android:layout_height="26dp"
+         android:layout_weight="20"
+         android:orientation="horizontal"
+         android:weightSum="100">
+Index: app/src/main/res/layout/step_count.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n\r\n    <ImageButton\r\n        android:id=\"@+id/back\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"120dp\"\r\n        android:layout_weight=\"80\"\r\n        android:background=\"@drawable/round_button\"\r\n        android:contentDescription=\"@string/back_button\"\r\n        android:scaleType=\"fitCenter\"\r\n        android:src=\"@drawable/back\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/speech2\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"150dp\"\r\n        android:layout_weight=\"80\"\r\n        android:background=\"@drawable/mic\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"10\"\r\n        android:gravity=\"center\"\r\n        android:orientation=\"vertical\"\r\n        android:text=\"@string/steps\"\r\n        android:textSize=\"30sp\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/button\"\r\n        android:layout_width=\"117dp\"\r\n        android:layout_height=\"52dp\"\r\n        android:text=\"@string/track\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.51\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/textView\"\r\n        app:layout_constraintVertical_bias=\"0.597\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView2\"\r\n        android:layout_width=\"173dp\"\r\n        android:layout_height=\"41dp\"\r\n        android:text=\"@string/todays_steps\"\r\n        android:textAlignment=\"center\"\r\n        android:textSize=\"24sp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/textView\"\r\n        app:layout_constraintVertical_bias=\"0.223\"\r\n        tools:text=\"Todays Steps\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView3\"\r\n        android:layout_width=\"125dp\"\r\n        android:layout_height=\"70dp\"\r\n        android:text=\"@string/step_counter\"\r\n        android:textAlignment=\"center\"\r\n        android:textSize=\"50sp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/textView\"\r\n        app:layout_constraintVertical_bias=\"0.346\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageView\"\r\n        android:layout_width=\"282dp\"\r\n        android:layout_height=\"47dp\"\r\n        android:contentDescription=\"@string/progress_bar\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.496\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.478\"\r\n        app:srcCompat=\"@android:drawable/bottom_bar\" />\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/step_count.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/step_count.xml	(date 1616533630615)
+@@ -35,7 +35,10 @@
+         android:orientation="vertical"
+         android:text="@string/steps"
+         android:textSize="30sp"
+-        app:layout_constraintTop_toTopOf="parent" />
++        app:layout_constraintTop_toTopOf="parent"
++        android:background="#4CAF50"
++        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++        android:textStyle="bold"/>
+ 
+     <Button
+         android:id="@+id/button"
+Index: app/src/main/res/layout/home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".Home\">\r\n\r\n    <!-- Title box-->\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"10\"\r\n        android:text=\"Home\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"30dp\" />\r\n\r\n    <!-- horizontal box containing buttons to access Food and Exercise-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"30\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/food\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/food\"\r\n            android:textAlignment=\"center\"\r\n            android:layout_weight=\"40\"/>\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/exercise\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/exercise\"\r\n            android:textAlignment=\"center\"\r\n            android:layout_weight=\"40\"/>\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- separation box-->\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"5\" />\r\n\r\n    <!-- horizontal box containing buttons to access Timetable and Friends-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"30\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/timetable\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/timetable\"\r\n            android:textAlignment=\"center\"\r\n            android:layout_weight=\"40\" />\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/friends\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/friends\"\r\n            android:textAlignment=\"center\"\r\n            android:layout_weight=\"40\" />\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- separation box-->\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"5\" />\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"20\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"vertical\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\"\r\n                />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/home.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/home.xml	(date 1616532096701)
+@@ -5,58 +5,87 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
++    android:background="#4CAF50"
+     android:weightSum="100"
+-    android:background="@color/background"
+-    tools:context=".Home">
++    tools:context=".MainActivity">
+ 
+     <!-- Title box-->
+-    <TextView
++    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+-        android:orientation="vertical"
+         android:layout_weight="10"
+-        android:text="Home"
+-        android:gravity="center"
+-        android:textSize="30dp" />
++        android:orientation="horizontal">
++
++        <TextView
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="55"
++            android:autoText="true"
++            android:background="#4CAF50"
++            android:contextClickable="true"
++            android:elegantTextHeight="false"
++            android:freezesText="true"
++            android:gravity="right|center_vertical"
++            android:text="HOME"
++            android:textAllCaps="false"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textSize="30sp"
++            android:textStyle="bold" />
++
++        <ImageView
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="50"
++            android:background="#4CAF50"
++            android:contentDescription="Home"
++            android:scaleType="fitStart"
++            android:src="@drawable/home" />
++
++    </LinearLayout>
+ 
+     <!-- horizontal box containing buttons to access Food and Exercise-->
++
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+-        android:orientation="horizontal"
+         android:layout_weight="30"
++        android:orientation="horizontal"
+         android:weightSum="100">
+ 
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="5"/>
++            android:layout_weight="5"
++            android:background="@android:color/white" />
+ 
+         <Button
+             android:id="@+id/food"
+             android:layout_width="0dp"
+-            android:layout_height="match_parent"
++            android:layout_height="171dp"
++            android:layout_weight="40"
+             android:background="@drawable/food"
+-            android:textAlignment="center"
+-            android:layout_weight="40"/>
++            android:textAlignment="center" />
+ 
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="10"/>
++            android:layout_weight="10"
++            android:background="#FFFFFF" />
+ 
+         <Button
+             android:id="@+id/exercise"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
++            android:layout_weight="40"
+             android:background="@drawable/exercise"
+-            android:textAlignment="center"
+-            android:layout_weight="40"/>
++            android:textAlignment="center" />
+ 
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="5"/>
++            android:layout_weight="5"
++            android:background="@android:color/white" />
++
+ 
+     </LinearLayout>
+ 
+@@ -64,47 +93,53 @@
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+-        android:orientation="vertical"
+-        android:layout_weight="5" />
++        android:layout_weight="5"
++        android:background="@android:color/white"
++        android:orientation="vertical" />
++
+ 
+     <!-- horizontal box containing buttons to access Timetable and Friends-->
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
++        android:layout_weight="30"
+         android:orientation="horizontal"
+-        android:layout_weight="30"
+         android:weightSum="100">
+ 
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="5"/>
++            android:layout_weight="5"
++            android:background="@android:color/white" />
++
+ 
+         <Button
+             android:id="@+id/timetable"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
++            android:layout_weight="40"
+             android:background="@drawable/timetable"
+-            android:textAlignment="center"
+-            android:layout_weight="40" />
++            android:textAlignment="center" />
+ 
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="10"/>
++            android:layout_weight="10"
++            android:background="@android:color/white" />
+ 
+         <Button
+             android:id="@+id/friends"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
++            android:layout_weight="40"
+             android:background="@drawable/friends"
+-            android:textAlignment="center"
+-            android:layout_weight="40" />
++            android:textAlignment="center" />
+ 
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:layout_weight="5"/>
++            android:layout_weight="5"
++            android:background="@android:color/white" />
+ 
+     </LinearLayout>
+ 
+@@ -112,46 +147,54 @@
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+-        android:orientation="vertical"
+-        android:layout_weight="5" />
++        android:layout_weight="5"
++        android:background="@android:color/white"
++        android:orientation="vertical" />
++
+ 
+     <!--Footer section for command buttons-->
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+-        android:orientation="horizontal"
+         android:layout_weight="20"
++        android:orientation="horizontal"
+         android:weightSum="100">
+ 
+         <LinearLayout
++            android:id="@+id/back"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+-            android:orientation="vertical"
+             android:layout_weight="50"
++            android:background="@android:color/white"
++            android:orientation="vertical"
+             android:weightSum="100">
++
+         </LinearLayout>
+ 
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
++            android:layout_weight="50"
++            android:background="@android:color/white"
+             android:orientation="horizontal"
+-            android:layout_weight="50"
+-            android:weightSum="100">
++            android:weightSum="100"
++
++            >
+ 
+             <!-- separation box-->
+             <View
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+-                android:orientation="horizontal"
+-                android:layout_weight="10" />
++                android:layout_weight="10"
++                android:background="@android:color/white"
++                android:orientation="horizontal" />
+ 
+             <Button
+                 android:id="@+id/speech"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_width="5dp"
++                android:layout_height="101dp"
+                 android:layout_weight="80"
+-                android:background="@drawable/mic"
+-                />
++                android:background="@drawable/mic" />
+ 
+         </LinearLayout>
+     </LinearLayout>
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".MainActivity\">\r\n\r\n\r\n    <!-- separation box-->\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"20\" />\r\n\r\n    <!-- horizontal box containing buttons to access Food and Recipes-->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"30\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n        <ImageView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/health\"\r\n            android:scaleType=\"fitCenter\"\r\n            android:layout_weight=\"40\"/>\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <ImageView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/fitness\"\r\n            android:scaleType=\"fitCenter\"\r\n            android:layout_weight=\"40\"/>\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"5\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- Title -->\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:layout_weight=\"10\"\r\n        android:text=\"Health And Fitness\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"30dp\" />\r\n\r\n    <!-- Start button -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"30\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"/>\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/start\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:src=\"@drawable/start\"\r\n            android:background=\"@drawable/round_button\"\r\n            android:scaleType=\"fitCenter\"\r\n            android:layout_weight=\"60\"/>\r\n\r\n\r\n\r\n    </LinearLayout>\r\n\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/activity_main.xml	(date 1616531854095)
+@@ -31,11 +31,11 @@
+             android:layout_weight="5"/>
+ 
+         <ImageView
+-            android:layout_width="0dp"
++            android:layout_width="208dp"
+             android:layout_height="match_parent"
++            android:layout_weight="40"
+             android:background="@drawable/health"
+-            android:scaleType="fitCenter"
+-            android:layout_weight="40"/>
++            android:scaleType="fitCenter" />
+ 
+         <View
+             android:layout_width="0dp"
+@@ -43,11 +43,11 @@
+             android:layout_weight="10"/>
+ 
+         <ImageView
+-            android:layout_width="0dp"
++            android:layout_width="198dp"
+             android:layout_height="match_parent"
++            android:layout_weight="40"
+             android:background="@drawable/fitness"
+-            android:scaleType="fitCenter"
+-            android:layout_weight="40"/>
++            android:scaleType="fitCenter" />
+ 
+         <View
+             android:layout_width="0dp"
+@@ -60,11 +60,15 @@
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
++        android:layout_weight="16"
++        android:elegantTextHeight="true"
++        android:freezesText="true"
++        android:gravity="center"
+         android:orientation="vertical"
+-        android:layout_weight="10"
+         android:text="Health And Fitness"
+-        android:gravity="center"
+-        android:textSize="30dp" />
++        android:textSize="36sp"
++        android:textStyle="bold"
++        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+ 
+     <!-- Start button -->
+     <LinearLayout
+@@ -81,13 +85,12 @@
+ 
+         <ImageButton
+             android:id="@+id/start"
+-            android:layout_width="0dp"
+-            android:layout_height="match_parent"
+-            android:src="@drawable/start"
++            android:layout_width="158dp"
++            android:layout_height="172dp"
++            android:layout_weight="60"
+             android:background="@drawable/round_button"
+             android:scaleType="fitCenter"
+-            android:layout_weight="60"/>
+-
++            android:src="@drawable/start" />
+ 
+ 
+     </LinearLayout>
+Index: app/src/main/res/layout/color_change.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:weightSum=\"100\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".Color_Change\">\r\n\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"10\"/>\r\n\r\n    <!-- 1st color -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/color_button_1\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"60\"\r\n            />\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <ImageView\r\n            android:id=\"@+id/pointer_1\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"\r\n            android:background=\"@drawable/point\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- 2nd color -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/color_button_2\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"60\"\r\n            />\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <ImageView\r\n            android:id=\"@+id/pointer_2\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"\r\n            android:background=\"@drawable/point\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- 3rd color -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/color_button_3\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"60\"\r\n            />\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <ImageView\r\n            android:id=\"@+id/pointer_3\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"\r\n            android:background=\"@drawable/point\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- 4th color -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/color_button_4\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"60\"\r\n            />\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <ImageView\r\n            android:id=\"@+id/pointer_4\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"\r\n            android:background=\"@drawable/point\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- 5th color -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/color_button_5\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"60\"\r\n            />\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <ImageView\r\n            android:id=\"@+id/pointer_5\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"\r\n            android:background=\"@drawable/point\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <!-- 6th color -->\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"10\"\r\n        android:weightSum=\"100\">\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <Button\r\n            android:id=\"@+id/color_button_6\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"60\"\r\n            />\r\n\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"10\"/>\r\n\r\n        <ImageView\r\n            android:id=\"@+id/pointer_6\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"20\"\r\n            android:background=\"@drawable/point\"/>\r\n\r\n    </LinearLayout>\r\n\r\n    <View\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"10\"/>\r\n\r\n\r\n\r\n\r\n    <!--Footer section for command buttons-->\r\n    <LinearLayout\r\n        android:baselineAligned=\"false\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"horizontal\"\r\n        android:layout_weight=\"20\"\r\n        android:weightSum=\"100\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <ImageButton\r\n                android:contentDescription=\"back button\"\r\n                android:id=\"@+id/back\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:src=\"@drawable/back\"\r\n                android:scaleType=\"fitCenter\"\r\n                android:background=\"@drawable/round_button\"\r\n                />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:layout_weight=\"50\"\r\n            android:weightSum=\"100\">\r\n\r\n            <!-- separation box-->\r\n            <View\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\"\r\n                android:layout_weight=\"10\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/speech\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"80\"\r\n                android:background=\"@drawable/mic\"\r\n                />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/color_change.xml	(revision a77d12cd96d50e5d13a9e435c4574f03ade5ccc5)
++++ app/src/main/res/layout/color_change.xml	(date 1616534256637)
+@@ -9,12 +9,43 @@
+     android:background="@color/background"
+     tools:context=".Color_Change">
+ 
+-    <View
++    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+-        android:layout_weight="10"/>
++        android:orientation="horizontal"
++        android:layout_weight="10"
++        android:weightSum="100">
++
++        <TextView
++            android:layout_width="341dp"
++            android:layout_height="match_parent"
++            android:layout_weight="70"
++            android:background="#4CAF50"
++            android:gravity="center_vertical|right"
++            android:text="BAR COLOUR CHANGE"
++            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++            android:textSize="30dp"
++            android:textStyle="bold" />
++
++        <View
++            android:layout_width="36dp"
++            android:layout_height="match_parent"
++            android:layout_weight="10"
++            android:background="#4CAF50"/>
++
++        <ImageView
++            android:id="@+id/pointer_1"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="20"
++            android:background="#4CAF50">
++
++        </ImageView>
+ 
+-    <!-- 1st color -->
++
++    </LinearLayout>
++
++    <!-- 1nd color -->
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+@@ -28,7 +59,7 @@
+             android:layout_weight="10"/>
+ 
+         <Button
+-            android:id="@+id/color_button_1"
++            android:id="@+id/color_button_2"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="60"
+@@ -40,7 +71,7 @@
+             android:layout_weight="10"/>
+ 
+         <ImageView
+-            android:id="@+id/pointer_1"
++            android:id="@+id/pointer_2"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="20"
+@@ -277,11 +308,10 @@
+ 
+             <Button
+                 android:id="@+id/speech"
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
++                android:layout_width="30dp"
++                android:layout_height="116dp"
+                 android:layout_weight="80"
+-                android:background="@drawable/mic"
+-                />
++                android:background="@drawable/mic" />
+ 
+         </LinearLayout>
+     </LinearLayout>
