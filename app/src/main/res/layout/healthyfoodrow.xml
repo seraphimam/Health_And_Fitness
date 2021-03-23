@@ -56,15 +56,6 @@
             android:textAlignment="center"
             android:textSize="24sp" />
     </LinearLayout>
-	
-	<TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="85dp"
-        android:layout_weight="1"
-        android:text="friend"
-        android:gravity="center"
-        />
 
 
 </LinearLayout>
