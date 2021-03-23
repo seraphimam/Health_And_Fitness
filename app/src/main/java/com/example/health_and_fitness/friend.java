@@ -12,14 +12,14 @@ import android.widget.TextView;
 
 public class friend extends ListActivity {
 
-    String[] friends = {"friend1", "friend2", "friend3", "friend4", "friend5"};
+    String[] friend = {"friend1", "friend2", "friend3", "friend4", "friend5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.friend);
 
-        MyCustomAdapter myAdapter = new MyCustomAdapter(this, R.layout.row, friends);
+        MyCustomAdapter myAdapter = new MyCustomAdapter(this, R.layout.friendrow, friend);
         setListAdapter(myAdapter);
 
         ImageButton back = (ImageButton) findViewById(R.id.back);
@@ -41,11 +41,10 @@ public class friend extends ListActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View row;
             LayoutInflater inflater = getLayoutInflater();
-            row = inflater.inflate(R.layout.row, parent, false);
+            row = inflater.inflate(R.layout.friendrow, parent, false);
 
-            TextView label = (TextView) row.findViewById(R.id.text);
-            label.setText(friends[position]);
-
+            TextView label = (TextView) row.findViewById(R.id.friends);
+            label.setText(friend[position]);
 
             return row;
         }

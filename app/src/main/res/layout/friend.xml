@@ -19,7 +19,7 @@
 
         <TextView
             android:layout_width="237dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_weight="10"
             android:gravity="center"
             android:orientation="vertical"
@@ -27,7 +27,7 @@
             android:textSize="30dp" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/friendpage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="10"
@@ -40,8 +40,8 @@
     <!--Footer section for command buttons-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="436dp"
-        android:layout_weight="30"
+        android:layout_height="0dp"
+        android:layout_weight="50"
         android:orientation="horizontal"
         android:weightSum="100">
 
@@ -56,7 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="70"
-            android:dividerHeight="1dp"></ListView>
+            android:dividerHeight="1dp">
+        </ListView>
 
 
     </LinearLayout>
@@ -64,24 +65,29 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="0dp"
         android:layout_weight="20"
         android:orientation="horizontal"
         android:weightSum="100">
 
         <View
-            android:layout_width="0dp"
+            android:id="@+id/view2"
+            android:layout_width="142dp"
             android:layout_height="match_parent"
-            android:layout_weight="50" />
+            android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="0"
-            android:text="add+" />
-    </LinearLayout>
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/addfriend" />
 
+        <View
+            android:id="@+id/view4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
