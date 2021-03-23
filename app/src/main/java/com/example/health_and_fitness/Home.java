@@ -11,14 +11,44 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home);
 
+        Button food = (Button) findViewById(R.id.food);
         Button exercise = (Button) findViewById(R.id.exercise);
+        Button timetable = (Button) findViewById(R.id.timetable);
+        Button friends = (Button) findViewById(R.id.friends);
+
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Home.this, Food_Home.class);
+
+                startActivity(i);
+            }
+        });
 
         exercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Home.this, Exercise_Video.class);
+                Intent i = new Intent(Home.this, Exercise_Home.class);
+
+                startActivity(i);
+            }
+        });
+
+        timetable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Home.this, Timetable.class);
+
+                startActivity(i);
+            }
+        });
+
+        friends.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Home.this, friend.class);
 
                 startActivity(i);
             }

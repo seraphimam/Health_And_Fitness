@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:weightSum="100"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".Food_Home">
 
     <!-- Title box-->
     <TextView
@@ -85,9 +85,27 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_weight="50"
             android:weightSum="100">
+
+            <!-- separation box-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="10" />
+
+            <ImageButton
+                android:contentDescription="back button"
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="80"
+                android:src="@drawable/back"
+                android:scaleType="fitCenter"
+                android:background="@drawable/round_button"
+                />
         </LinearLayout>
 
         <LinearLayout

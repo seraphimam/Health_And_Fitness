@@ -10,13 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class healthyfood extends ListActivity {
 
-    String[] foods = {"apple","nuts","banana","spinach"," "};
-    int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach, };
+    String[] foods = {"apple","nuts","banana","spinach","apple", "apple"};
+    int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach, R.drawable.apple,R.drawable.apple};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,15 @@ public class healthyfood extends ListActivity {
 
         MyCustomAdapter myAdapter = new MyCustomAdapter(this, R.layout.row, foods);
         setListAdapter(myAdapter);
+
+        ImageButton back = (ImageButton) findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 
@@ -42,14 +52,14 @@ public class healthyfood extends ListActivity {
             TextView label1 = (TextView) row.findViewById(R.id.healthyfood1);
             label1.setText(foods[position]);
 
-            TextView label2 = (TextView) row.findViewById(R.id.healthyfood2);
-            label2.setText(foods[position+2]);
-
             ImageView icon1 = (ImageView) row.findViewById(R.id.food1);
-            ImageView icon2 = (ImageView) row.findViewById(R.id.food2);
-
             icon1.setImageResource(img[position]);
-            icon2.setImageResource(img[position+2]);
+
+            TextView label2 = (TextView) row.findViewById(R.id.healthyfood2);
+            label2.setText(foods[++position]);
+
+            ImageView icon2 = (ImageView) row.findViewById(R.id.food2);
+            icon2.setImageResource(img[position++]);
 
 
             return row;

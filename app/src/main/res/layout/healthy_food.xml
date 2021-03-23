@@ -13,14 +13,14 @@
     <!-- Title box-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="0dp"
         android:layout_weight="10"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
             android:gravity="center"
             android:orientation="vertical"
             android:text="healthy food"
@@ -28,20 +28,39 @@
 
         <ImageView
             android:id="@+id/healthyfood"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:scaleType="fitCenter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitStart"
+            android:layout_weight="50"
             android:src="@drawable/apple" />
     </LinearLayout>
 
 
-    <!-- separation box-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40" />
+
+        <Button
+            android:id="@+id/up"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:text="Button" />
+    </LinearLayout>
 
     <!--Footer section for command buttons-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="489dp"
-        android:layout_weight="30"
+        android:layout_height="0dp"
+        android:layout_weight="50"
         android:orientation="horizontal"
         android:weightSum="100">
 
@@ -57,28 +76,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:layout_weight="20"
+        android:layout_height="0dp"
+        android:layout_weight="10"
         android:orientation="horizontal"
         android:weightSum="100">
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="50" />
+            android:layout_weight="40" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="0"
+            android:id="@+id/down"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
             android:text="Button" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="92dp"
+        android:layout_height="0dp"
         android:layout_weight="20"
         android:orientation="horizontal"
         android:weightSum="100">
@@ -86,25 +105,27 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="50"
             android:orientation="horizontal"
+            android:layout_weight="50"
             android:weightSum="100">
 
             <!-- separation box-->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:orientation="horizontal" />
+                android:orientation="horizontal"
+                android:layout_weight="10" />
 
-            <Button
-                android:id="@+id/BACK"
+            <ImageButton
+                android:contentDescription="back button"
+                android:id="@+id/back"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="80"
+                android:src="@drawable/back"
                 android:scaleType="fitCenter"
+                android:background="@drawable/round_button"
                 />
-
         </LinearLayout>
 
         <LinearLayout

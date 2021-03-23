@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class friend extends ListActivity {
@@ -20,6 +21,15 @@ public class friend extends ListActivity {
 
         MyCustomAdapter myAdapter = new MyCustomAdapter(this, R.layout.row, friends);
         setListAdapter(myAdapter);
+
+        ImageButton back = (ImageButton) findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     public class MyCustomAdapter extends ArrayAdapter<String>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/back2"
+        android:id="@+id/back"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_weight="80"
