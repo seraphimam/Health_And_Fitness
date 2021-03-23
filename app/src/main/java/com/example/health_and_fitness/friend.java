@@ -2,11 +2,13 @@ package com.example.health_and_fitness;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -23,11 +25,20 @@ public class friend extends ListActivity {
         setListAdapter(myAdapter);
 
         ImageButton back = (ImageButton) findViewById(R.id.back);
+        Button addfriend = (Button) findViewById(R.id.addfriend);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        addfriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(friend.this, Add_Friend.class);
+                startActivity(i);
             }
         });
     }

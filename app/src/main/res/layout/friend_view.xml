@@ -57,7 +57,7 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="10"
-        android:layout_weightSum="100">
+        android:weightSum="100">
 
         <TextView
             android:layout_width="0dp"
