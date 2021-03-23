@@ -34,6 +34,7 @@ public class friend extends ListActivity {
             }
         });
 
+        //hop
         addfriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
