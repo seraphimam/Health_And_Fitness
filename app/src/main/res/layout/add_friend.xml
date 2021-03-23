@@ -10,14 +10,29 @@
     tools:context=".MainActivity">
 
     <!-- Title box-->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="10"
-        android:text="Add_Friend +"
-        android:gravity="center"
-        android:textSize="30dp" />
+        android:orientation="horizontal"
+        android:layout_weight="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:text="Add Friend"
+            android:gravity="center_vertical|right"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:contentDescription="Add Friend Image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:scaleType="fitStart"
+            android:src="@drawable/exercise"/>
+
+    </LinearLayout>
 
     <!-- separation box-->
     <View
@@ -73,23 +88,15 @@
             android:layout_weight="10"/>
 
 
-
     </LinearLayout>
+
     <!--Footer section for command buttons-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         android:layout_weight="20"
+        android:orientation="horizontal"
         android:weightSum="100">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="50"
-            android:weightSum="100">
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -105,13 +112,38 @@
                 android:orientation="horizontal"
                 android:layout_weight="10" />
 
+            <ImageButton
+                android:contentDescription="back button"
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="80"
+                android:src="@drawable/back"
+                android:scaleType="fitCenter"
+                android:background="@drawable/round_button"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <!-- separation box-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:orientation="horizontal" />
+
             <Button
                 android:id="@+id/speech"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="80"
-                android:background="@drawable/mic"
-                />
+                android:background="@drawable/mic" />
 
         </LinearLayout>
     </LinearLayout>
