@@ -18,20 +18,23 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="237dp"
-            android:layout_height="50dp"
-            android:layout_weight="10"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:text="friend"
-            android:textSize="30dp" />
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:text="FRIENDS"
+            android:gravity="center_vertical|right"
+            android:textSize="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold"
+            android:background="#4CAF50" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:scaleType="fitStart"
+            android:background="#4CAF50"
+            android:src="@drawable/friends" />
     </LinearLayout>
 
 
@@ -64,7 +67,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="26dp"
         android:layout_weight="20"
         android:orientation="horizontal"
         android:weightSum="100">

@@ -35,7 +35,10 @@
         android:orientation="vertical"
         android:text="@string/steps"
         android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#4CAF50"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/button"

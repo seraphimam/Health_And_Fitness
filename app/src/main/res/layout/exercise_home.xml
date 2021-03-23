@@ -6,25 +6,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#4CAF50">
 
     <!-- Title box-->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="10"
-        android:text="Food"
-        android:gravity="center"
-        android:textSize="30dp" />
+        android:layout_height="42dp"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:text="EXERCISES"
+            android:gravity="center_vertical|right"
+            android:textSize="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold"
+            android:background="#4CAF50" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:scaleType="fitStart"
+            android:background="#4CAF50"
+            android:src="@drawable/exercise" />
+    </LinearLayout>
 
     <!-- separation box-->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="20" />
+        android:layout_weight="20"
+        android:background="@android:color/white"/>
 
     <!-- horizontal box containing buttons to access Exercise and Steps-->
     <LinearLayout
@@ -37,7 +55,8 @@
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"/>
+            android:layout_weight="5"
+            android:background="@android:color/white"/>
 
         <Button
             android:id="@+id/exercise"
@@ -50,7 +69,8 @@
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="10"/>
+            android:layout_weight="10"
+            android:background="@android:color/white"/>
 
         <Button
             android:id="@+id/steps"
@@ -63,7 +83,8 @@
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"/>
+            android:layout_weight="5"
+            android:background="@android:color/white"/>
 
     </LinearLayout>
 
@@ -72,7 +93,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="20" />
+        android:layout_weight="20"
+        android:background="@android:color/white"/>
 
     <!--Footer section for command buttons-->
     <LinearLayout
@@ -80,31 +102,34 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="20"
-        android:weightSum="100">
+        android:weightSum="100"
+        android:background="@android:color/white">
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="136dp"
             android:layout_weight="50"
-            android:weightSum="100">
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:background="@android:color/white">
 
             <!-- separation box-->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_weight="10" />
+                android:layout_weight="10"
+                android:background="@android:color/white"
+                android:orientation="horizontal" />
 
             <ImageButton
-                android:contentDescription="back button"
                 android:id="@+id/back"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="80"
-                android:src="@drawable/back"
+                android:background="@android:color/white"
+                android:contentDescription="back button"
                 android:scaleType="fitCenter"
-                android:background="@drawable/round_button"
+                android:src="@drawable/back"
                 />
         </LinearLayout>
 
@@ -113,19 +138,21 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_weight="50"
-            android:weightSum="100">
+            android:weightSum="100"
+            android:background="@android:color/white">
 
             <!-- separation box-->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_weight="10" />
+                android:layout_weight="10"
+                />
 
             <Button
                 android:id="@+id/speech"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="117dp"
                 android:layout_weight="80"
                 android:background="@drawable/mic"
                 />
