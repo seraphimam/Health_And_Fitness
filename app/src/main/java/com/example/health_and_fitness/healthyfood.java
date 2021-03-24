@@ -55,10 +55,13 @@ public class healthyfood extends ListActivity {
             label1.setText(foods[position]);
             ImageView icon1 = (ImageView) row.findViewById(R.id.food1);
             icon1.setImageResource(img[position]);
-            TextView label2 = (TextView) row.findViewById(R.id.healthyfood2);
-            label2.setText(foods[++position+1]);
-            ImageView icon2 = (ImageView) row.findViewById(R.id.food2);
-            icon2.setImageResource(img[++position]);
+            if(++position+1 < 4)
+            {
+                TextView label2 = (TextView) row.findViewById(R.id.healthyfood2);
+                label2.setText(foods[++position+1]);
+                ImageView icon2 = (ImageView) row.findViewById(R.id.food2);
+                icon2.setImageResource(img[++position]);
+            }
 
             return row;
         }
