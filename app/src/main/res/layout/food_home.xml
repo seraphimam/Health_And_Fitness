@@ -6,25 +6,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    android:background="@color/background"
-    tools:context=".Food_Home">
+    tools:context=".Food_Home"
+    android:background="#4CAF50">
 
     <!-- Title box-->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
         android:layout_weight="10"
-        android:text="Food"
-        android:gravity="center"
-        android:textSize="30dp" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:background="#4CAF50"
+            android:gravity="center_vertical|right"
+            android:text="FOOD"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="#4CAF50"
+            android:scaleType="fitStart"
+            android:src="@drawable/food" />
+    </LinearLayout>
 
     <!-- separation box-->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="20" />
+        android:layout_weight="20"
+        android:background="@android:color/white"/>
 
     <!-- horizontal box containing buttons to access Food and Recipes-->
     <LinearLayout
@@ -37,20 +55,22 @@
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"/>
+            android:layout_weight="5"
+            android:background="@android:color/white"/>
 
         <Button
             android:id="@+id/food"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/food"
+            android:background="@drawable/healthy"
             android:textAlignment="center"
             android:layout_weight="40"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="10"/>
+            android:layout_weight="10"
+            android:background="@android:color/white"/>
 
         <Button
             android:id="@+id/recipes"
@@ -63,7 +83,8 @@
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"/>
+            android:layout_weight="5"
+            android:background="@android:color/white"/>
 
     </LinearLayout>
 
@@ -72,7 +93,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="20" />
+        android:layout_weight="20"
+        android:background="@android:color/white"/>
 
     <!--Footer section for command buttons-->
     <LinearLayout
@@ -80,21 +102,24 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="20"
-        android:weightSum="100">
+        android:weightSum="100"
+        android:background="@android:color/white">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_weight="50"
-            android:weightSum="100">
+            android:weightSum="100"
+            android:background="@android:color/white">
 
             <!-- separation box-->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_weight="10" />
+                android:layout_weight="10"
+                android:background="@android:color/white"/>
 
             <ImageButton
                 android:contentDescription="back button"
@@ -117,18 +142,18 @@
 
             <!-- separation box-->
             <View
-                android:layout_width="0dp"
+                android:layout_width="6dp"
                 android:layout_height="match_parent"
+                android:layout_weight="10"
                 android:orientation="horizontal"
-                android:layout_weight="10" />
+                android:background="@android:color/white"/>
 
             <Button
                 android:id="@+id/speech"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:layout_height="117dp"
                 android:layout_weight="80"
-                android:background="@drawable/mic"
-                />
+                android:background="@drawable/mic" />
 
         </LinearLayout>
     </LinearLayout>

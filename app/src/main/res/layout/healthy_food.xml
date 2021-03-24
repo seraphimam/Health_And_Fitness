@@ -20,19 +20,21 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="50"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:text="healthy food"
-            android:textSize="30dp" />
+            android:layout_weight="70"
+            android:text="HEALTHY"
+            android:gravity="center_vertical|right"
+            android:textSize="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold"
+            android:background="#4CAF50" />
 
         <ImageView
-            android:id="@+id/healthyfood"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:scaleType="fitStart"
             android:layout_weight="50"
-            android:src="@drawable/apple" />
+            android:scaleType="fitStart"
+            android:background="#4CAF50"
+            android:src="@drawable/healthy"/>
     </LinearLayout>
 
     <!-- listview -->
@@ -102,8 +104,8 @@
 
             <Button
                 android:id="@+id/speech"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_width="4dp"
+                android:layout_height="103dp"
                 android:layout_weight="80"
                 android:background="@drawable/mic" />
 

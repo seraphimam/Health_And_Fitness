@@ -19,9 +19,12 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="70"
-            android:text="Recipe"
+            android:text="RECIPES"
             android:gravity="center_vertical|right"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:background="#4CAF50"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold"/>
 
         <ImageView
             android:contentDescription="Recipe Image"
@@ -29,7 +32,11 @@
             android:layout_height="match_parent"
             android:layout_weight="50"
             android:scaleType="fitStart"
-            android:src="@drawable/recipes"/>
+            android:src="@drawable/recipes"
+            android:background="#4CAF50"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
@@ -136,11 +143,10 @@
 
             <Button
                 android:id="@+id/speech"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_width="11dp"
+                android:layout_height="97dp"
                 android:layout_weight="80"
-                android:background="@drawable/mic"
-                />
+                android:background="@drawable/mic" />
 
         </LinearLayout>
     </LinearLayout>

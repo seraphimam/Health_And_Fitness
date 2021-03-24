@@ -19,9 +19,12 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="70"
-            android:text="Timetable"
             android:gravity="center_vertical|right"
-            android:textSize="30dp" />
+            android:text="TIMETABLE"
+            android:textSize="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold"
+            android:background="#4CAF50"/>
 
         <ImageView
             android:contentDescription="Timetable Image"
@@ -29,7 +32,9 @@
             android:layout_height="match_parent"
             android:layout_weight="50"
             android:scaleType="fitStart"
-            android:src="@drawable/timetable"/>
+            android:src="@drawable/timetable"
+
+            android:background="#4CAF50"/>
 
     </LinearLayout>
 
@@ -93,11 +98,10 @@
 
             <Button
                 android:id="@+id/speech"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_width="14dp"
+                android:layout_height="89dp"
                 android:layout_weight="80"
-                android:background="@drawable/mic"
-                />
+                android:background="@drawable/mic" />
 
         </LinearLayout>
     </LinearLayout>
