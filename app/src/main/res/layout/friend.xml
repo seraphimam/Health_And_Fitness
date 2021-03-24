@@ -13,7 +13,7 @@
     <!-- Title box-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="0dp"
         android:layout_weight="10"
         android:orientation="horizontal">
 
@@ -37,26 +37,23 @@
             android:src="@drawable/friends" />
     </LinearLayout>
 
-
-    <!-- separation box-->
-
-    <!--Footer section for command buttons-->
+    <!-- friend list -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="436dp"
-        android:layout_weight="30"
+        android:layout_height="0dp"
+        android:layout_weight="60"
         android:orientation="horizontal"
         android:weightSum="100">
 
         <View
             android:id="@+id/view"
-            android:layout_width="194dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="70" />
+            android:layout_weight="15" />
 
         <ListView
             android:id="@android:id/list"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="70"
             android:dividerHeight="1dp"></ListView>
@@ -67,25 +64,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="26dp"
-        android:layout_weight="20"
+        android:layout_height="0dp"
+        android:layout_weight="10"
         android:orientation="horizontal"
         android:weightSum="100">
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="50" />
+            android:layout_weight="35" />
 
         <Button
             android:id="@+id/addfriend"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
             android:text="add+" />
     </LinearLayout>
 
-
+    <!--Footer section for command buttons-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -136,7 +133,7 @@
             <Button
                 android:id="@+id/speech"
                 android:layout_width="0dp"
-                android:layout_height="61dp"
+                android:layout_height="match_parent"
                 android:layout_weight="80"
                 android:background="@drawable/mic" />
 
