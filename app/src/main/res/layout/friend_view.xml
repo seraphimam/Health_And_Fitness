@@ -59,6 +59,12 @@
         android:layout_weight="10"
         android:weightSum="100">
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="15" />
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"

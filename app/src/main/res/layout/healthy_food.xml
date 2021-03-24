@@ -104,8 +104,8 @@
 
             <Button
                 android:id="@+id/speech"
-                android:layout_width="4dp"
-                android:layout_height="103dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="80"
                 android:background="@drawable/mic" />
 

@@ -37,8 +37,7 @@ public class Exercise_Video extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Exercise_Video.this, MainActivity.class);
-                startActivity(i);
+                finish();
             }
         });
 

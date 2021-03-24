@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#4CAF50"
+    android:background="@color/background"
     android:weightSum="100"
     tools:context=".MainActivity">
 
@@ -14,14 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
+        android:background="@color/img_bg"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="55"
-            android:autoText="true"
-            android:background="#4CAF50"
             android:contextClickable="true"
             android:elegantTextHeight="false"
             android:freezesText="true"
@@ -36,19 +35,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:background="#4CAF50"
             android:contentDescription="Home"
             android:scaleType="fitStart"
             android:src="@drawable/home" />
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+
     <!-- horizontal box containing buttons to access Food and Exercise-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="30"
+        android:layout_weight="27.5"
+        android:background="@color/img_bg"
         android:orientation="horizontal"
         android:weightSum="100">
 
@@ -61,24 +65,22 @@
         <Button
             android:id="@+id/food"
             android:layout_width="0dp"
-            android:layout_height="171dp"
+            android:layout_height="match_parent"
             android:layout_weight="40"
-            android:background="@drawable/food"
-            android:textAlignment="center" />
+            android:background="@drawable/food" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="10"
-            android:background="#FFFFFF" />
+            android:background="@android:color/white" />
 
         <Button
             android:id="@+id/exercise"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="40"
-            android:background="@drawable/exercise"
-            android:textAlignment="center" />
+            android:background="@drawable/exercise" />
 
         <View
             android:layout_width="0dp"
@@ -86,15 +88,14 @@
             android:layout_weight="5"
             android:background="@android:color/white" />
 
-
     </LinearLayout>
+
 
     <!-- separation box-->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
-        android:background="@android:color/white"
         android:orientation="vertical" />
 
 
@@ -102,7 +103,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="30"
+        android:layout_weight="27.5"
+        android:background="@color/img_bg"
         android:orientation="horizontal"
         android:weightSum="100">
 
@@ -148,7 +150,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
-        android:background="@android:color/white"
         android:orientation="vertical" />
 
 
@@ -191,8 +192,8 @@
 
             <Button
                 android:id="@+id/speech"
-                android:layout_width="5dp"
-                android:layout_height="101dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="80"
                 android:background="@drawable/mic" />
 
