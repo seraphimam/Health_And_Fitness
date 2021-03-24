@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class friend extends ListActivity {
@@ -42,6 +43,13 @@ public class friend extends ListActivity {
                 startActivity(i);
             }
         });
+    }
+
+    public void onListItemClick(ListView lv, View v, int position, long id) {
+        String selection = lv.getItemAtPosition(position).toString();
+        Intent i = new Intent(friend.this, Friend_View.class);
+
+        startActivity(i);
     }
 
     public class MyCustomAdapter extends ArrayAdapter<String>
