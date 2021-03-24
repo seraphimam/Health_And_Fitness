@@ -13,10 +13,10 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        Button food = (Button) findViewById(R.id.food);
-        Button exercise = (Button) findViewById(R.id.exercise);
-        Button timetable = (Button) findViewById(R.id.timetable);
-        Button friends = (Button) findViewById(R.id.friends);
+        Button food = (Button) findViewById(R.id.foodmain);
+        Button exercise = (Button) findViewById(R.id.exercisemain);
+        Button timetable = (Button) findViewById(R.id.timetablemain);
+        Button friends = (Button) findViewById(R.id.friendsmain);
 
         food.setOnClickListener(new View.OnClickListener() {
             @Override

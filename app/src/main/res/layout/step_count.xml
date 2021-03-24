@@ -9,6 +9,8 @@
         android:id="@+id/back"
         android:layout_width="0dp"
         android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:layout_weight="80"
         android:background="@drawable/round_button"
         android:contentDescription="@string/back_button"
@@ -19,8 +21,10 @@
 
     <Button
         android:id="@+id/speech2"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_width="168dp"
+        android:layout_height="105dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         android:layout_weight="80"
         android:background="@drawable/mic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,14 +35,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
+        android:background="#4CAF50"
         android:gravity="center"
         android:orientation="vertical"
         android:text="@string/steps"
-        android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#4CAF50"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textStyle="bold"/>
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"

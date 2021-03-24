@@ -14,8 +14,8 @@ public class Food_Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food_home);
 
-        Button food = (Button) findViewById(R.id.food);
-        Button recipes = (Button) findViewById(R.id.recipes);
+        Button food = (Button) findViewById(R.id.foodmain2);
+        Button recipes = (Button) findViewById(R.id.recipesmain);
         ImageButton back = (ImageButton) findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {

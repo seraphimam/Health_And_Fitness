@@ -59,10 +59,10 @@
             android:background="@android:color/white"/>
 
         <Button
-            android:id="@+id/food"
+            android:id="@+id/foodmain2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/healthy"
+            android:background="@drawable/foodmain2"
             android:textAlignment="center"
             android:layout_weight="40"/>
 
@@ -73,10 +73,10 @@
             android:background="@android:color/white"/>
 
         <Button
-            android:id="@+id/recipes"
+            android:id="@+id/recipesmain"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/recipes"
+            android:background="@drawable/recipesmain"
             android:textAlignment="center"
             android:layout_weight="40"/>
 

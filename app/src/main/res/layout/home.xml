@@ -63,11 +63,11 @@
             android:background="@android:color/white" />
 
         <Button
-            android:id="@+id/food"
+            android:id="@+id/foodmain"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="40"
-            android:background="@drawable/food" />
+            android:background="@drawable/foodmain" />
 
         <View
             android:layout_width="0dp"
@@ -76,11 +76,11 @@
             android:background="@android:color/white" />
 
         <Button
-            android:id="@+id/exercise"
+            android:id="@+id/exercisemain"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="40"
-            android:background="@drawable/exercise" />
+            android:background="@drawable/exercisemain" />
 
         <View
             android:layout_width="0dp"
@@ -116,11 +116,11 @@
 
 
         <Button
-            android:id="@+id/timetable"
+            android:id="@+id/timetablemain"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="40"
-            android:background="@drawable/timetable"
+            android:background="@drawable/timetablemain"
             android:textAlignment="center" />
 
         <View
@@ -130,11 +130,11 @@
             android:background="@android:color/white" />
 
         <Button
-            android:id="@+id/friends"
+            android:id="@+id/friendsmain"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="40"
-            android:background="@drawable/friends"
+            android:background="@drawable/friendsmain"
             android:textAlignment="center" />
 
         <View

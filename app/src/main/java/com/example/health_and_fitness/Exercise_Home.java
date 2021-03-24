@@ -14,8 +14,8 @@ public class Exercise_Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercise_home);
 
-        Button exercise = (Button) findViewById(R.id.exercise);
-        Button steps = (Button) findViewById(R.id.steps);
+        Button exercise = (Button) findViewById(R.id.exercisemain2);
+        Button steps = (Button) findViewById(R.id.stepsmain);
         ImageButton back = (ImageButton) findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {

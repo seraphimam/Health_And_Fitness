@@ -59,10 +59,10 @@
             android:background="@android:color/white"/>
 
         <Button
-            android:id="@+id/exercise"
+            android:id="@+id/exercisemain2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/exercise"
+            android:background="@drawable/exercisemain2"
             android:textAlignment="center"
             android:layout_weight="40"/>
 
@@ -73,10 +73,10 @@
             android:background="@android:color/white"/>
 
         <Button
-            android:id="@+id/steps"
+            android:id="@+id/stepsmain"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/steps"
+            android:background="@drawable/stepsmain"
             android:textAlignment="center"
             android:layout_weight="40"/>
 
