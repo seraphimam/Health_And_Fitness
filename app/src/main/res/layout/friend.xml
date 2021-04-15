@@ -10,7 +10,6 @@
     tools:context=".friend">
     <!--android:background="@color/background" -->
 
-
     <!-- Title box-->
     <LinearLayout
         android:layout_width="match_parent"
