@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
+    android:background="@android:color/white"
     tools:context=".friend">
     <!--android:background="@color/background" -->
 
@@ -129,13 +130,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="10"
                 android:orientation="horizontal" />
-
-            <Button
-                android:id="@+id/speech"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="80"
-                android:background="@drawable/mic" />
 
         </LinearLayout>
     </LinearLayout>

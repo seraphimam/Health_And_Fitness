@@ -305,13 +305,6 @@
                 android:orientation="horizontal"
                 android:layout_weight="10" />
 
-            <Button
-                android:id="@+id/speech"
-                android:layout_width="5dp"
-                android:layout_height="108dp"
-                android:layout_weight="80"
-                android:background="@drawable/mic" />
-
         </LinearLayout>
     </LinearLayout>
 
