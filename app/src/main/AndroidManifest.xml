@@ -76,7 +76,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".healthyfood">
+        <activity android:name=".Healthyfood">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
