@@ -1,32 +1,32 @@
 package com.example.health_and_fitness;
 
-
-import android.app.ListActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class healthyfood extends ListActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    String[] foods = {"apple","nuts","banana","spinach","pear"};
-    int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach,R.drawable.pear};
+public class Healthyfood extends AppCompatActivity {
+
+    GridView gridview;
+    String[] foods ={"apple","nuts","banana","spinach","apple","nuts","banana","spinach"};
+    int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach,R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.healthy_food);
+        setContentView(R.layout.healthyfood);
 
-        MyCustomAdapter myAdapter = new MyCustomAdapter(this, R.layout.healthyfoodrow, foods);
-        setListAdapter(myAdapter);
+        gridview = findViewById(R.id.gridView);
 
         ImageButton back = (ImageButton) findViewById(R.id.back);
 
@@ -37,33 +37,56 @@ public class healthyfood extends ListActivity {
             }
         });
 
+        CustomAdapter customerAdapter = new CustomAdapter(foods, img,this);
+
+        gridview.setAdapter(customerAdapter);
     }
 
-
-    public class MyCustomAdapter extends ArrayAdapter<String>
+    public class CustomAdapter extends BaseAdapter
     {
-        public MyCustomAdapter(Context context, int rowLayoutId, String[] myArrayData) {
-            super(context, rowLayoutId, myArrayData);
+
+        private String[] label;
+        private int[] icon;
+        private Context context;
+        private LayoutInflater layoutinflater;
+
+        public CustomAdapter(String[] label, int[] icon, Context context) {
+            this.label = label;
+            this.icon = icon;
+            this.context = context;
+            this.layoutinflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
         }
 
-        public View getView(int position, View convertView, ViewGroup parent) {
-            View row;
-            LayoutInflater inflater = getLayoutInflater();
-            row = inflater.inflate(R.layout.healthyfoodrow, parent, false);
+        @Override
+        public int getCount() {
+            return icon.length;
+        }
 
-            TextView label1 = (TextView) row.findViewById(R.id.healthyfood1);
-            label1.setText(foods[position]);
-            ImageView icon1 = (ImageView) row.findViewById(R.id.food1);
-            icon1.setImageResource(img[position]);
-            if(++position+1 < 4)
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View view, ViewGroup viewGroup) {
+            if(view == null)
             {
-                TextView label2 = (TextView) row.findViewById(R.id.healthyfood2);
-                label2.setText(foods[++position+1]);
-                ImageView icon2 = (ImageView) row.findViewById(R.id.food2);
-                icon2.setImageResource(img[++position]);
+                view = layoutinflater.inflate(R.layout.healthyfood_row_items, viewGroup, false);
             }
 
-            return row;
+            TextView textname = view.findViewById(R.id.textname);
+            ImageView imagename = view.findViewById(R.id.imageview);
+
+            textname.setText(foods[position]);
+            imagename.setImageResource(img[position]);
+
+            return view;
         }
     }
+
 }

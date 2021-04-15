@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    tools:context=".healthyfood">
+    tools:context=".Healthyfood">
     <!--android:background="@color/background" -->
 
 
@@ -45,12 +45,14 @@
         android:orientation="horizontal"
         android:weightSum="100">
 
-        <ListView
-            android:id="@android:id/list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:dividerHeight="1dp"></ListView>
-
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="460dp"
+            android:layout_marginTop="10dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="2"
+            android:verticalSpacing="4dp" />
 
     </LinearLayout>
 
