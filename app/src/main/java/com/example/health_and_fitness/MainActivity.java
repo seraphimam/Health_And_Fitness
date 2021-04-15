@@ -10,10 +10,15 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    DatabaseManager dbm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dbm = new DatabaseManager(this);
+        dbm.open();
 
         ImageButton start = (ImageButton) findViewById(R.id.start);
 
@@ -25,5 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        dbm.close();
     }
 }
