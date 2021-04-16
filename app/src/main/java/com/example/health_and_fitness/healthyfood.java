@@ -44,7 +44,6 @@ public class Healthyfood extends AppCompatActivity {
 
     public class CustomAdapter extends BaseAdapter
     {
-
         private String[] label;
         private int[] icon;
         private Context context;
