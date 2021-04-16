@@ -18,8 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Healthyfood extends AppCompatActivity {
 
     GridView gridview;
-    String[] foods ={"apple","nuts","banana","spinach","apple","nuts","banana","spinach"};
-    int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach,R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach};
+    String[] foods ={"apple","nuts","banana","spinach","egg","salmon","lean beef","chicken"};
+    int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach,R.drawable.egg,R.drawable.salmon,R.drawable.lean_beef,R.drawable.chicken};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
