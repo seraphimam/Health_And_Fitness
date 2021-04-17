@@ -17,22 +17,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String KEY_STEPS_ID = "_id";
     public static final String KEY_WALK_STEPS = "walk_steps";
-    public static final String KEY_S_FRIENDS_ID = "s_friends_id";
 
     public static final String KEY_TIMETABLE_ID = "_id";
     public static final String KEY_ACTIVITY_NAME = "activity_name";
     public static final String KEY_ACTIVITY_TIME = "activity_time";
-    public static final String KEY_T_FRIENDS_ID = "t_friends_id";
 
     public static final String KEY_FOOD_ID = "_id";
     public static final String KEY_FOOD_NAME = "food_name";
     public static final String KEY_FOOD_VIDEO_URL = "food_video_url";
-    public static final String KEY_F_TIMETABLE_ID = "f_timetable_id";
 
     public static final String KEY_EXERCISE_ID = "_id";
     public static final String KEY_EXERCISE_NAME = "exercise_name";
     public static final String KEY_EXERCISE_VIDEO_URL = "exercise_video_url";
-    public static final String KEY_E_TIMETABLE_ID = "e_timetable_id";
+
+    public static final String KEY_FOOD_INFORMATION_ID = "_id";
+    public static final String KEY_CALORIES_PER_100_GRAMS = "calories_per_100_grams"
+;    public static final String KEY_PROTEIN_PER_100_GRAM = "protein_per_100_grams";
+    public static final String KEY_FATS_PER_100_GRAM = "fats_per_100_grams";
+    public static final String KEY_SUGAR_PER_100_GRAM = "sugar_per_100_grams";
 
     public static final String DATABASE_NAME = "health&fitness";
     public static final int DATABASE_VERSION = 1;
@@ -41,6 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_TABLE3 = "timetable";
     public static final String DATABASE_TABLE4 = "food";
     public static final String DATABASE_TABLE5 = "exercise";
+    public static final String DATABASE_TABLE6 = "food_information";
 
     //create tables
     private static final String DATABASE_CREATE1 =
@@ -53,33 +56,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATE2 =
             "CREATE TABLE " + DATABASE_TABLE2  + "("
                     + KEY_STEPS_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + KEY_WALK_STEPS +  " integer not null, "
-                    + KEY_S_FRIENDS_ID + " integer not null, "
-                    + "FOREIGN KEY(s_friends_id) REFERENCES friends(_id) "
+                    + KEY_WALK_STEPS +  " integer not null "
                     + ")";
     private static final String DATABASE_CREATE3 =
             "CREATE TABLE " + DATABASE_TABLE3  +
                     "(" + KEY_TIMETABLE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + KEY_ACTIVITY_NAME +  " text not null, "
-                    + KEY_ACTIVITY_TIME + " date not null, "
-                    + KEY_T_FRIENDS_ID + " integer not null, "
-                    + "FOREIGN KEY(t_friends_id) REFERENCES friends(_id) "
+                    + KEY_ACTIVITY_TIME + " date not null"
                     + ")";
     private static final String DATABASE_CREATE4 =
             "CREATE TABLE " + DATABASE_TABLE4  +
                     "(" + KEY_FOOD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + KEY_FOOD_NAME +  " text not null, "
-                    + KEY_FOOD_VIDEO_URL + " text not null, "
-                    + KEY_F_TIMETABLE_ID + " integer not null, "
-                    + "FOREIGN KEY(f_timetable_id) REFERENCES timetable(_id) "
+                    + KEY_FOOD_VIDEO_URL + " text not null "
                     + ")";
     private static final String DATABASE_CREATE5 =
             "CREATE TABLE " + DATABASE_TABLE5  +
                     "(" + KEY_EXERCISE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + KEY_EXERCISE_NAME +  " text not null, "
-                    + KEY_EXERCISE_VIDEO_URL + " text not null, "
-                    + KEY_E_TIMETABLE_ID + " integer not null, "
-                    + "FOREIGN KEY(e_timetable_id) REFERENCES timetable(_id) "
+                    + KEY_EXERCISE_VIDEO_URL + " text not null "
+                    + ")";
+    private static final String DATABASE_CREATE6 =
+            "CREATE TABLE " + DATABASE_TABLE6  +
+                    "(" + KEY_FOOD_INFORMATION_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + KEY_CALORIES_PER_100_GRAMS +  " integer not null, "
+                    + KEY_PROTEIN_PER_100_GRAM + " float not null, "
+                    + KEY_FATS_PER_100_GRAM + " float not null, "
+                    + KEY_SUGAR_PER_100_GRAM + " float not null "
                     + ")";
     public DatabaseHelper(Context context)
     {
@@ -94,6 +97,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(DATABASE_CREATE3);
         db.execSQL(DATABASE_CREATE4);
         db.execSQL(DATABASE_CREATE5);
+        db.execSQL(DATABASE_CREATE6);
     }
 
     @Override
@@ -104,6 +108,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE3);
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE4);
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE5);
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE6);
 
         // Create tables again
         onCreate(db);

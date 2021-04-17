@@ -12,6 +12,7 @@ import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE2;
 import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE3;
 import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE4;
 import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE5;
+import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE6;
 
 import static com.example.health_and_fitness.DatabaseHelper.KEY_FRIENDS_ID;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_FIENDS_NAME;
@@ -32,9 +33,15 @@ import static com.example.health_and_fitness.DatabaseHelper.KEY_EXERCISE_ID;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_EXERCISE_NAME;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_EXERCISE_VIDEO_URL;
 
+import static com.example.health_and_fitness.DatabaseHelper.KEY_FOOD_INFORMATION_ID;
+import static com.example.health_and_fitness.DatabaseHelper.KEY_CALORIES_PER_100_GRAMS;
+import static com.example.health_and_fitness.DatabaseHelper.KEY_PROTEIN_PER_100_GRAM;
+import static com.example.health_and_fitness.DatabaseHelper.KEY_FATS_PER_100_GRAM;
+import static com.example.health_and_fitness.DatabaseHelper.KEY_SUGAR_PER_100_GRAM;
 
 
-public class DatabaseManager
+
+public class DatabaseManager extends MainActivity
 {
     Context context;
     private DatabaseHelper myDatabaseHelper;
@@ -56,6 +63,5 @@ public class DatabaseManager
     {
         myDatabaseHelper.close();
     }
-
 
 }
