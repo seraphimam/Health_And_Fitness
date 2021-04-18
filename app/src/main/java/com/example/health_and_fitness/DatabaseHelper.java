@@ -24,17 +24,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String KEY_FOOD_ID = "_id";
     public static final String KEY_FOOD_NAME = "food_name";
-    public static final String KEY_FOOD_VIDEO_URL = "food_video_url";
 
     public static final String KEY_EXERCISE_ID = "_id";
     public static final String KEY_EXERCISE_NAME = "exercise_name";
     public static final String KEY_EXERCISE_VIDEO_URL = "exercise_video_url";
 
     public static final String KEY_FOOD_INFORMATION_ID = "_id";
-    public static final String KEY_CALORIES_PER_100_GRAMS = "calories_per_100_grams"
-;    public static final String KEY_PROTEIN_PER_100_GRAM = "protein_per_100_grams";
-    public static final String KEY_FATS_PER_100_GRAM = "fats_per_100_grams";
-    public static final String KEY_SUGAR_PER_100_GRAM = "sugar_per_100_grams";
+    public static final String KEY_FOOD_INFORMATION_NAME = "food_name";
+    public static final String KEY_CALORIES_PER_100_GRAMS = "calories_per_100_grams";
+    public static final String KEY_PROTEIN_PER_100_GRAMS = "protein_per_100_grams";
+    public static final String KEY_FATS_PER_100_GRAMS = "fats_per_100_grams";
+    public static final String KEY_SUGAR_PER_100_GRAMS = "sugar_per_100_grams";
 
     public static final String DATABASE_NAME = "health&fitness";
     public static final int DATABASE_VERSION = 1;
@@ -67,8 +67,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATE4 =
             "CREATE TABLE " + DATABASE_TABLE4  +
                     "(" + KEY_FOOD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + KEY_FOOD_NAME +  " text not null, "
-                    + KEY_FOOD_VIDEO_URL + " text not null "
+                    + KEY_FOOD_NAME +  " text not null "
                     + ")";
     private static final String DATABASE_CREATE5 =
             "CREATE TABLE " + DATABASE_TABLE5  +
@@ -79,10 +78,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATE6 =
             "CREATE TABLE " + DATABASE_TABLE6  +
                     "(" + KEY_FOOD_INFORMATION_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + KEY_FOOD_INFORMATION_NAME + " text not null, "
                     + KEY_CALORIES_PER_100_GRAMS +  " integer not null, "
-                    + KEY_PROTEIN_PER_100_GRAM + " float not null, "
-                    + KEY_FATS_PER_100_GRAM + " float not null, "
-                    + KEY_SUGAR_PER_100_GRAM + " float not null "
+                    + KEY_PROTEIN_PER_100_GRAMS + " double not null, "
+                    + KEY_FATS_PER_100_GRAMS + " double not null, "
+                    + KEY_SUGAR_PER_100_GRAMS + " double not null "
                     + ")";
     public DatabaseHelper(Context context)
     {

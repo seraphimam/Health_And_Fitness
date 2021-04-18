@@ -1,11 +1,13 @@
 package com.example.health_and_fitness;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 
@@ -14,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class Healthyfood extends AppCompatActivity {
 
@@ -40,6 +43,16 @@ public class Healthyfood extends AppCompatActivity {
         CustomAdapter customerAdapter = new CustomAdapter(foods, img,this);
 
         gridview.setAdapter(customerAdapter);
+
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedNames = foods[position];
+                int selectedImages = img[position];
+                Intent i = new Intent(Healthyfood.this, food_information.class);
+                startActivity(i.putExtra("name",selectedNames).putExtra("image",selectedImages));
+            }
+        });
     }
 
     public class CustomAdapter extends BaseAdapter
