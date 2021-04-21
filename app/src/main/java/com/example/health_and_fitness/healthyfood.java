@@ -18,7 +18,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class Healthyfood extends AppCompatActivity {
+public class healthyfood extends AppCompatActivity {
 
     GridView gridview;
     String[] foods ={"apple","nuts","banana","spinach","egg","salmon","lean beef","chicken"};
@@ -49,7 +49,7 @@ public class Healthyfood extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedNames = foods[position];
                 int selectedImages = img[position];
-                Intent i = new Intent(Healthyfood.this, food_information.class);
+                Intent i = new Intent(healthyfood.this, food_information.class);
                 startActivity(i.putExtra("name",selectedNames).putExtra("image",selectedImages));
             }
         });

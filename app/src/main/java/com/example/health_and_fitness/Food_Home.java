@@ -28,7 +28,7 @@ public class Food_Home extends AppCompatActivity {
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Food_Home.this, Healthyfood.class);
+                Intent i = new Intent(Food_Home.this, healthyfood.class);
 
                 startActivity(i);
             }

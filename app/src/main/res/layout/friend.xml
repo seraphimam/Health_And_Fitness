@@ -21,19 +21,19 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="70"
-            android:text="FRIENDS"
+            android:background="#FFEB3B"
             android:gravity="center_vertical|right"
-            android:textSize="30dp"
+            android:text="FRIENDS"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textStyle="bold"
-            android:background="#4CAF50" />
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="50"
+            android:background="#FFEB3B"
             android:scaleType="fitStart"
-            android:background="#4CAF50"
             android:src="@drawable/friends" />
     </LinearLayout>
 

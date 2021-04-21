@@ -20,7 +20,7 @@
             android:layout_width="341dp"
             android:layout_height="match_parent"
             android:layout_weight="70"
-            android:background="#4CAF50"
+            android:background="#2180F3"
             android:gravity="center_vertical|end"
             android:text="BAR COLOUR CHANGE"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -28,16 +28,16 @@
             android:textStyle="bold" />
 
         <View
-            android:layout_width="36dp"
+            android:layout_width="24dp"
             android:layout_height="match_parent"
             android:layout_weight="10"
-            android:background="#4CAF50"/>
+            android:background="#2180F3" />
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="20"
-            android:background="#4CAF50">
+            android:background="#2196F3">
 
         </ImageView>
 

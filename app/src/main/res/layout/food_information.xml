@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    tools:context=".Healthyfood">
+    tools:context=".healthyfood">
 
     <!-- Title box-->
     <LinearLayout

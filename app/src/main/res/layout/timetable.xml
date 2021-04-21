@@ -24,7 +24,7 @@
             android:textSize="30dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textStyle="bold"
-            android:background="#4CAF50"/>
+            android:background="#FF9800"/>
 
         <ImageView
             android:contentDescription="Timetable Image"
@@ -34,7 +34,7 @@
             android:scaleType="fitStart"
             android:src="@drawable/timetable"
 
-            android:background="#4CAF50"/>
+            android:background="#FF9800"/>
 
     </LinearLayout>
 

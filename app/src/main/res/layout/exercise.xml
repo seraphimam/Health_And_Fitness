@@ -24,7 +24,7 @@
             android:textSize="30dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textStyle="bold"
-            android:background="#4CAF50"/>
+            android:background="#2180F3"/>
 
         <ImageView
             android:contentDescription="Exercise Image"
@@ -33,7 +33,7 @@
             android:layout_weight="50"
             android:scaleType="fitStart"
             android:src="@drawable/exercise"
-            android:background="#4CAF50"/>
+            android:background="#2180F3"/>
 
     </LinearLayout>
 

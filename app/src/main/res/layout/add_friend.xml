@@ -23,18 +23,18 @@
             android:text="ADD FRIEND"
             android:gravity="center_vertical|right"
             android:textSize="30dp"
-            android:background="#4CAF50"
+            android:background="#FFEB3B"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textStyle="bold"/>
 
         <ImageView
-            android:contentDescription="Add Friend Image"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="50"
+            android:background="#FFEB3B"
+            android:contentDescription="Add Friend Image"
             android:scaleType="fitStart"
-            android:src="@drawable/addfriend"
-            android:background="#4CAF50"/>
+            android:src="@drawable/addfriend" />
 
     </LinearLayout>
 
