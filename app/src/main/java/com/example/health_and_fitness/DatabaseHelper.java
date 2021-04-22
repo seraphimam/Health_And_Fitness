@@ -35,6 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_TABLE1 = "friends";
     public static final String DATABASE_TABLE2 = "steps";
+    
     public static final String DATABASE_TABLE4 = "food";
     public static final String DATABASE_TABLE5 = "exercise";
     public static final String DATABASE_TABLE6 = "food_information";

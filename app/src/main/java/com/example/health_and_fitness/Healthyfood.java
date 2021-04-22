@@ -25,8 +25,8 @@ import java.util.ArrayList;
 public class Healthyfood extends AppCompatActivity {
 
     GridView gridview;
-    String[] foods ={"apple","nuts","banana","spinach","egg","salmon","lean beef","chicken",
-            "yogurt","beans","cottage cheese","avocado","olive oil","potatoes","coconut oil"};
+    DatabaseManager dbm = new DatabaseManager(this);
+
     int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach,
             R.drawable.egg,R.drawable.salmon,R.drawable.lean_beef,R.drawable.chicken,
             R.drawable.yogurt,R.drawable.beans,R.drawable.cottage_cheese,R.drawable.avocado,
@@ -115,6 +115,21 @@ public class Healthyfood extends AppCompatActivity {
             {
                 view = layoutinflater.inflate(R.layout.healthyfood_row_items, viewGroup, false);
             }
+
+            Cursor mCursor;
+            dbm.open();
+            mCursor = dbm.getAllFood();
+            ArrayList<String> foodlist = new ArrayList<String>();
+            while(mCursor.moveToNext())
+            {
+                try{
+                    foodlist.add(mCursor.getString(1));
+                }
+                catch(Exception e){
+                    Log.d("error ",e.toString());
+                }
+            }
+            final String[] foods = (String[]) foodlist.toArray(new String[foodlist.size()]);
 
             TextView textname = view.findViewById(R.id.textname);
             ImageView imagename = view.findViewById(R.id.imageview);

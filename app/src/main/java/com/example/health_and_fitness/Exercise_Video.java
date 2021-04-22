@@ -1,6 +1,7 @@
 package com.example.health_and_fitness;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -14,18 +15,18 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Exercise_Video extends AppCompatActivity {
     private int vid = 0;
     static String url_loc = "https://vimeo.com/showcase/8125021/video/";
-    String[] video = {"512551820", "511158996", "511158825", "507005667",
-                        "501907540", "497980379", "497657534", "480272500", "477151391"
-                        , "475914217", "470585398", "470165436", "464498409", "462649958"
-                        , "461399070", "455222599", "449336188", "449335850", "442751123"
-                        , "437143366", "427395039"};
+    DatabaseManager dbm = new DatabaseManager(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercise);
 
-        String url = url_loc + video[vid] + "/embed";
+        Cursor mCursor;
+        final DatabaseManager dbm = new DatabaseManager(this);
+        dbm.open();
+        mCursor = dbm.SearchExerciseVideo(vid);
+        String url = url_loc + mCursor.getString(1)+ "/embed";
 
         WebView w = (WebView) findViewById(R.id.exercise_video);
         w.getSettings().setJavaScriptEnabled(true);
@@ -48,7 +49,12 @@ public class Exercise_Video extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 vid--;
-                String prev_url = url_loc + video[vid] + "/embed";
+
+                Cursor mCursor;
+                dbm.open();
+                mCursor = dbm.SearchRecipeVideo(vid);
+                String prev_url = url_loc + mCursor.getString(1)+ "/embed";
+
                 WebView w = (WebView) findViewById(R.id.exercise_video);
                 w.getSettings().setJavaScriptEnabled(true);
                 w.loadUrl(prev_url);
@@ -60,7 +66,12 @@ public class Exercise_Video extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 vid++;
-                String next_url = url_loc + video[vid] + "/embed";
+
+                Cursor mCursor;
+                dbm.open();
+                mCursor = dbm.SearchRecipeVideo(vid);
+                String next_url = url_loc + mCursor.getString(1)+ "/embed";
+
                 WebView w = (WebView) findViewById(R.id.exercise_video);
                 w.getSettings().setJavaScriptEnabled(true);
                 w.loadUrl(next_url);
@@ -74,6 +85,9 @@ public class Exercise_Video extends AppCompatActivity {
         Button up = (Button) findViewById(R.id.up);
         Button down = (Button) findViewById(R.id.down);
 
+        dbm.open();
+        long amount = dbm.getExerciseVideoAmount();
+
         if(vid == 0){
             up.setVisibility(View.INVISIBLE);
             up.setClickable(false);
@@ -82,7 +96,7 @@ public class Exercise_Video extends AppCompatActivity {
             up.setClickable(true);
         }
 
-        if(vid == (video.length - 1)){
+        if(vid == (amount - 1)){
             down.setVisibility(View.INVISIBLE);
             down.setClickable(false);
         }else{
