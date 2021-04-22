@@ -1,6 +1,7 @@
 package com.example.health_and_fitness;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -14,8 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Exercise_Video extends AppCompatActivity {
     private int vid = 0;
     static String url_loc = "https://vimeo.com/showcase/8125021/video/";
-    String[] video = {"512551820", "511582457", "511158996", "511158825",
-                        "509716824", "508037594", "507084029", "507005667", "506147217"};
+    String[] video = {"512551820", "511158996", "511158825", "507005667",
+                        "501907540", "497980379", "497657534", "480272500", "477151391"
+                        , "475914217", "470585398", "470165436", "464498409", "462649958"
+                        , "461399070", "455222599", "449336188", "449335850", "442751123"
+                        , "437143366", "427395039"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +30,20 @@ public class Exercise_Video extends AppCompatActivity {
 
         WebView w = (WebView) findViewById(R.id.exercise_video);
         w.getSettings().setJavaScriptEnabled(true);
+        /*
+        Cursor mCursor;
+        DatabaseManager dbm = new DatabaseManager(this);
+        dbm.open();
+        mCursor = dbm.SearchExerciseVideo(vid);
+        String url = url_loc + mCursor.getString(1)+ "/embed";
+        */
         w.loadUrl(url);
+
 
         Button up = (Button) findViewById(R.id.up);
         Button down = (Button) findViewById(R.id.down);
         ImageButton back = (ImageButton) findViewById(R.id.back);
+
 
         set_button();
 
@@ -64,6 +77,7 @@ public class Exercise_Video extends AppCompatActivity {
                 set_button();
             }
         });
+
     }
 
     private void set_button(){

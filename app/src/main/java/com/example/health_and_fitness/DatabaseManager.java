@@ -9,10 +9,10 @@ import android.database.sqlite.SQLiteDatabase;
 
 import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE1;
 import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE2;
-import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE3;
 import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE4;
 import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE5;
 import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE6;
+import static com.example.health_and_fitness.DatabaseHelper.DATABASE_TABLE7;
 
 import static com.example.health_and_fitness.DatabaseHelper.KEY_FRIENDS_ID;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_FIENDS_NAME;
@@ -21,16 +21,15 @@ import static com.example.health_and_fitness.DatabaseHelper.KEY_USERNAME;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_STEPS_ID;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_WALK_STEPS;
 
-import static com.example.health_and_fitness.DatabaseHelper.KEY_TIMETABLE_ID;
-import static com.example.health_and_fitness.DatabaseHelper.KEY_ACTIVITY_NAME;
-import static com.example.health_and_fitness.DatabaseHelper.KEY_ACTIVITY_TIME;
-
 import static com.example.health_and_fitness.DatabaseHelper.KEY_FOOD_ID;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_FOOD_NAME;
 
 import static com.example.health_and_fitness.DatabaseHelper.KEY_EXERCISE_ID;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_EXERCISE_NAME;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_EXERCISE_VIDEO_URL;
+
+import static com.example.health_and_fitness.DatabaseHelper.KEY_RECIPE_ID;
+import static com.example.health_and_fitness.DatabaseHelper.KEY_RECIPE_VIDEO_VID;
 
 import static com.example.health_and_fitness.DatabaseHelper.KEY_FOOD_INFORMATION_ID;
 import static com.example.health_and_fitness.DatabaseHelper.KEY_FOOD_INFORMATION_NAME;
@@ -84,6 +83,23 @@ public class DatabaseManager extends MainActivity
         return myDatabase.insert(DATABASE_TABLE6, null, initialValues);
     }
 
+    public long insertRercipeVideo(int rowId, String videoVid)
+    {
+        ContentValues initialValues = new ContentValues();
+        initialValues.put(KEY_RECIPE_ID,rowId);
+        initialValues.put(KEY_RECIPE_VIDEO_VID,videoVid);
+        return myDatabase.insert(DATABASE_TABLE7, null, initialValues);
+    }
+
+    public long insertExerciseVideo(int rowId, String videoVid)
+    {
+        ContentValues initialValues = new ContentValues();
+        initialValues.put(KEY_EXERCISE_ID,rowId);
+        initialValues.put(KEY_EXERCISE_NAME,videoVid);
+        initialValues.put(KEY_EXERCISE_VIDEO_URL,videoVid);
+        return myDatabase.insert(DATABASE_TABLE5, null, initialValues);
+    }
+
     public Cursor SearchFoodInformation(int rowId, String foodName) throws SQLException
     {
         Cursor mCursor = null;
@@ -124,17 +140,47 @@ public class DatabaseManager extends MainActivity
         return mCursor;
     }
 
-    public Cursor getAllFoods() {
+    public Cursor SearchRecipeVideo(int rowId) throws SQLException
+    {
         Cursor mCursor = null;
-        mCursor = myDatabase.query(true, DATABASE_TABLE4, new String[] {
-                        KEY_FOOD_NAME
+
+            mCursor = myDatabase.query(true, DATABASE_TABLE7, new String[] {
+                            KEY_RECIPE_ID,
+                            KEY_RECIPE_VIDEO_VID
+                    },
+                    KEY_RECIPE_ID + " == " + "\'" + rowId + "\'",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null);
+
+        if (mCursor != null) {
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
+
+    public Cursor SearchExerciseVideo(int rowId) throws SQLException
+    {
+        Cursor mCursor = null;
+
+        mCursor = myDatabase.query(true, DATABASE_TABLE5, new String[] {
+                        KEY_EXERCISE_ID,
+                        KEY_EXERCISE_NAME,
+                        KEY_EXERCISE_VIDEO_URL
                 },
-                null,
+                KEY_EXERCISE_ID + " == " + "\'" + rowId + "\'",
                 null,
                 null,
                 null,
                 null,
                 null);
+
+        if (mCursor != null) {
+            mCursor.moveToFirst();
+        }
         return mCursor;
     }
+
 }

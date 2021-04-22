@@ -8,13 +8,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static com.example.health_and_fitness.DatabaseHelper.KEY_FOOD_NAME;
-import static com.example.health_and_fitness.DatabaseHelper.KEY_CALORIES_PER_100_GRAMS;
-import static com.example.health_and_fitness.DatabaseHelper.KEY_PROTEIN_PER_100_GRAMS;
-import static com.example.health_and_fitness.DatabaseHelper.KEY_FATS_PER_100_GRAMS;
-import static com.example.health_and_fitness.DatabaseHelper.KEY_SUGAR_PER_100_GRAMS;
-
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class food_information extends AppCompatActivity {
@@ -55,10 +48,10 @@ public class food_information extends AppCompatActivity {
             mCursor = dbm.SearchFoodInformation(0,selectedNames);
 
             foodname.setText(selectedNames);
-            calories.setText("calories: " + mCursor.getString(1));
-            protein.setText("protein: " + mCursor.getString(2));
-            fats.setText("fats: " + mCursor.getString(3));
-            sugar.setText("sugar: " + mCursor.getString(4));
+            calories.setText("calories per 100 GRAM: " + mCursor.getString(1));
+            protein.setText("protein per 100 GRAM: " + mCursor.getString(2));
+            fats.setText("fats per 100 GRAM: " + mCursor.getString(3));
+            sugar.setText("sugar per 100 GRAM: " + mCursor.getString(4));
 
         }
 
