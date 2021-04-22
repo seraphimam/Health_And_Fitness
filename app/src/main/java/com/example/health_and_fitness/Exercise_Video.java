@@ -52,7 +52,7 @@ public class Exercise_Video extends AppCompatActivity {
 
                 Cursor mCursor;
                 dbm.open();
-                mCursor = dbm.SearchRecipeVideo(vid);
+                mCursor = dbm.SearchExerciseVideo(vid);
                 String prev_url = url_loc + mCursor.getString(1)+ "/embed";
 
                 WebView w = (WebView) findViewById(R.id.exercise_video);
@@ -69,7 +69,7 @@ public class Exercise_Video extends AppCompatActivity {
 
                 Cursor mCursor;
                 dbm.open();
-                mCursor = dbm.SearchRecipeVideo(vid);
+                mCursor = dbm.SearchExerciseVideo(vid);
                 String next_url = url_loc + mCursor.getString(1)+ "/embed";
 
                 WebView w = (WebView) findViewById(R.id.exercise_video);
