@@ -13,11 +13,13 @@
         android:layout_height="200dp"
         android:src="@drawable/apple"
         android:scaleType = "fitXY" />
+
     <TextView
+        android:id="@+id/textname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "name"
-        android:layout_below = "@+id/imageview"
-        android:layout_centerHorizontal= "true"
-        android:id="@+id/textname"/>
+        android:layout_below="@+id/imageview"
+        android:layout_centerHorizontal="true"
+        android:text="name"
+        android:textSize="20sp" />
 </RelativeLayout>

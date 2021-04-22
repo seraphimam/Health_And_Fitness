@@ -1,7 +1,6 @@
 package com.example.health_and_fitness;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -30,20 +29,11 @@ public class Exercise_Video extends AppCompatActivity {
 
         WebView w = (WebView) findViewById(R.id.exercise_video);
         w.getSettings().setJavaScriptEnabled(true);
-        /*
-        Cursor mCursor;
-        DatabaseManager dbm = new DatabaseManager(this);
-        dbm.open();
-        mCursor = dbm.SearchExerciseVideo(vid);
-        String url = url_loc + mCursor.getString(1)+ "/embed";
-        */
         w.loadUrl(url);
-
 
         Button up = (Button) findViewById(R.id.up);
         Button down = (Button) findViewById(R.id.down);
         ImageButton back = (ImageButton) findViewById(R.id.back);
-
 
         set_button();
 

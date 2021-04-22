@@ -1,6 +1,5 @@
 package com.example.health_and_fitness;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -35,13 +34,6 @@ public class Recipe extends AppCompatActivity {
 
         WebView w = (WebView) findViewById(R.id.exercise_video);
         w.getSettings().setJavaScriptEnabled(true);
-        /*
-        Cursor mCursor;
-        DatabaseManager dbm = new DatabaseManager(this);
-        dbm.open();
-        mCursor = dbm.SearchRecipeVideo(vid);
-        String url = url_loc + mCursor.getString(1)+ "/embed";
-        */
         w.loadUrl(url);
 
         Button up = (Button) findViewById(R.id.up);

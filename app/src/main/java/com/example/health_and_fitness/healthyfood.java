@@ -2,10 +2,12 @@ package com.example.health_and_fitness;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.util.Log;
 
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
@@ -17,12 +19,18 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 
 public class healthyfood extends AppCompatActivity {
 
     GridView gridview;
-    String[] foods ={"apple","nuts","banana","spinach","egg","salmon","lean beef","chicken"};
-    int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach,R.drawable.egg,R.drawable.salmon,R.drawable.lean_beef,R.drawable.chicken};
+    String[] foods ={"apple","nuts","banana","spinach","egg","salmon","lean beef","chicken",
+            "yogurt","beans","cottage cheese","avocado","olive oil","potatoes","coconut oil"};
+    int[] img = {R.drawable.apple,R.drawable.nuts,R.drawable.banana,R.drawable.spinach,
+            R.drawable.egg,R.drawable.salmon,R.drawable.lean_beef,R.drawable.chicken,
+            R.drawable.yogurt,R.drawable.beans,R.drawable.cottage_cheese,R.drawable.avocado,
+            R.drawable.olive_oil,R.drawable.potatoes,R.drawable.coconut_oil,};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +47,22 @@ public class healthyfood extends AppCompatActivity {
                 finish();
             }
         });
+
+        Cursor mCursor;
+        DatabaseManager dbm = new DatabaseManager(this);
+        dbm.open();
+        mCursor = dbm.getAllFood();
+        ArrayList<String> foodlist = new ArrayList<String>();
+        while(mCursor.moveToNext())
+        {
+            try{
+                foodlist.add(mCursor.getString(1));
+            }
+            catch(Exception e){
+                Log.d("error ",e.toString());
+            }
+        }
+        final String[] foods = (String[]) foodlist.toArray(new String[foodlist.size()]);
 
         CustomAdapter customerAdapter = new CustomAdapter(foods, img,this);
 
@@ -68,6 +92,7 @@ public class healthyfood extends AppCompatActivity {
             this.context = context;
             this.layoutinflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
         }
+
 
         @Override
         public int getCount() {
