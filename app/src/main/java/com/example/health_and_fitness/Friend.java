@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class friend extends ListActivity {
+public class Friend extends ListActivity {
 
     String[] friend = {"friend1", "friend2", "friend3", "friend4", "friend5"};
 
@@ -39,7 +39,7 @@ public class friend extends ListActivity {
         addfriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(friend.this, Add_Friend.class);
+                Intent i = new Intent(Friend.this, Add_Friend.class);
                 startActivity(i);
             }
         });
@@ -47,7 +47,8 @@ public class friend extends ListActivity {
 
     public void onListItemClick(ListView lv, View v, int position, long id) {
         String selection = lv.getItemAtPosition(position).toString();
-        Intent i = new Intent(friend.this, Friend_View.class);
+        Intent i = new Intent(Friend.this, Friend_View.class);
+        i.putExtra("pos", position);
 
         startActivity(i);
     }

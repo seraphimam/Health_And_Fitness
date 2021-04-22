@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:weightSum="100"
     android:background="@android:color/white"
-    tools:context=".friend">
+    tools:context=".Friend">
     <!--android:background="@color/background" -->
 
     <!-- Title box-->

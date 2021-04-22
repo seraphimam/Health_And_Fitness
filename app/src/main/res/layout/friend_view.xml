@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:weightSum="100"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".Friend_View">
 
     <!-- Title box-->
     <TextView
@@ -41,7 +41,6 @@
             android:id="@+id/friendpic"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/friendpic"
             android:textAlignment="center"
             android:layout_weight="90"/>
 
